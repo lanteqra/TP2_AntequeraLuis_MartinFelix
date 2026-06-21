@@ -41,29 +41,29 @@
     <!-- Accessibilité -->
     <a href="#content" class="screen-reader-text">Aller au contenu principal</a>
     <header>
-        <div class="grid grid-cols-12 gap-1 text-center">
+        <div class="navbar__container grid grid-cols-12 gap-1 text-center">
 
             <!-- component -->
-            <nav class="col-span-12 flex items-center bg-bleu-nuit p-3 flex-wrap">
-                <a href="index.html" class="p-2 mr-4 inline-flex items-center">
-                    <img src="media/logo.jpg" alt="logo" class="w-24 h-24 rounded-full p-4">
+            <nav class=" navbar col-span-12 flex items-center bg-bleu-nuit p-3 flex-wrap">
+                <a href="index.html" class="navbar__brand p-2 mr-4 inline-flex items-center">
+                    <img src="media/logo.jpg" alt="logo" class="navbar__logo w-24 h-24 rounded-full p-4">
                     <span
-                        class="font-titre text-xl text-blanc-stellaire font-bold uppercase tracking-wide hover:text-orange-horizon"">Interstellar</span>
+                        class="navbar__title font-titre text-xl text-blanc-stellaire font-bold uppercase tracking-wide hover:text-orange-horizon"">Interstellar</span>
                 </a>
                 <button
-                    class=" text-blanc-stellaire inline-flex p-4 hover:bg-blanc-stellaire/25 rounded lg:hidden ml-auto
+                    class="navbar__toggle text-blanc-stellaire inline-flex p-4 hover:bg-blanc-stellaire/25 rounded lg:hidden ml-auto
                         hover:text-orange-horizon outline-none nav-toggler" data-target="#navigation">
                         <i class="material-icons !text-4xl">menu</i>
                         </button>
-                        <div class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto" id="navigation">
+                        <div class="navbar__menu hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto" id="navigation">
                             <div
-                                class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto pr-5 gap-3.5 text-[1.2rem]">
+                                class=" navbar__list lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto pr-5 gap-3.5 text-[1.2rem]">
                                 <a href="index.html"
-                                    class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-bleu-nuit font-semibold items-center justify-center bg-beige-terre hover:bg-blanc-stellaire hover:text-orange-horizon transition-colors">
+                                    class="navbar__link navbar__link--active lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-bleu-nuit font-semibold items-center justify-center bg-beige-terre hover:bg-blanc-stellaire hover:text-orange-horizon transition-colors">
                                     <span>Accueil</span>
                                 </a>
                                 <a href="tournage.html"
-                                    class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-bleu-nuit font-extrabold items-center justify-center bg-blanc-stellaire hover:bg-blanc-stellaire transition-colors hover:text-orange-horizon">
+                                    class="navbar__link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-bleu-nuit font-extrabold items-center justify-center bg-blanc-stellaire hover:bg-blanc-stellaire transition-colors hover:text-orange-horizon">
                                     <span>Tournage</span>
                                 </a>
 
