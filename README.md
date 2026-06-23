@@ -30,19 +30,29 @@ Dans le cadre du cours Techniques d'intégration des interfaces Web 2, ce travai
     - Animations CSS :
         - 
         - 
-- Composants Tailwind
+
+- Composants Tailwind :
+    - Barre de navigation : "Simple Responsive Navigation Bar" - https://www.creative-tim.com/twcomponents/component/simple-responsive-navigation-bar
+    - Carrousel :
+    - Accordéon :
+    
 - Javascript (animations)
     - Animation Js :
         - 
         - 
 
+**note :** Tous les composants Tailwind (navbar, carrousel, accordéon) ainsi que les 
+animations CSS et JavaScript utilisées dans ce projet ont été modifiés et 
+adaptés à partir de leurs versions de base afin de correspondre à l'identité 
+visuelle du projet (palette de couleurs, typographies et thème Interstellar).
    
 ## Tâches :
 
 | Membre     | Tâche réalisée |
 |------------|----------------|
-| Luis       |                |
-| Félix      |                |
+| Luis       |  Configuration initiale du projet (Tailwind, structure HTML)     |
+| Luis       |  Navbar responsive (grille, menu hamburger, palette de couleurs) - Correction du contraste WCAG sur la navbar    |
+| Félix      |  Footer          |
 |------------|----------------|
 
 
