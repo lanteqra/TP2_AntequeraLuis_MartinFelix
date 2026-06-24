@@ -33,12 +33,12 @@ Dans le cadre du cours Techniques d'intégration des interfaces Web 2, ce travai
 
 - Composants Tailwind :
     - Barre de navigation : "Simple Responsive Navigation Bar" - https://www.creative-tim.com/twcomponents/component/simple-responsive-navigation-bar
-    - Carrousel :
+    - Carrousel : "Carousel with indicator buttons" - https://daisyui.com/components/carousel/#carousel-with-indicator-buttons
     - Accordéon :
     
 - Javascript (animations)
     - Animation Js :
-        - 
+        - Carousel personnalisé avec auto-slide et dots de navigation - js/carousel.js
         - 
 
 **note :** Tous les composants Tailwind (navbar, carrousel, accordéon) ainsi que les 
@@ -53,8 +53,9 @@ visuelle du projet (palette de couleurs, typographies et thème Interstellar).
 | Luis       |  Configuration initiale du projet (Tailwind, structure HTML)     |
 | Luis       |  Navbar responsive (grille, menu hamburger, palette de couleurs) - Correction du contraste WCAG sur la navbar    |
 | Félix      |  Footer          |
+| Luis       | hero - carrousel|
 |------------|----------------|
-
+|------------|----------------|
 
 
 ## Validation W3C :
