@@ -15,10 +15,19 @@
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="js/navbar.js" defer></script>
+
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"
         integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link
+        href="https://cdn.jsdelivr.net/combine/npm/daisyui@5/base/rootscrolllock.css,npm/daisyui@5/base/properties.css,npm/daisyui@5/base/scrollbar.css,npm/daisyui@5/base/rootscrollgutter.css,npm/daisyui@5/base/svg.css,npm/daisyui@5/base/rootcolor.css,npm/daisyui@5/base/reset.css,npm/daisyui@5/components/carousel.css,npm/daisyui@5/theme/light.css"
+        rel="stylesheet" type="text/css" />
+    <script src="js/carousel.js" defer></script>
+    <script src="js/achatValide.js" defer></script>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -39,23 +48,26 @@
 
 <body class="font-corps">
     <!-- Accessibilité -->
-    <a href="#content" class="screen-reader-text">Aller au contenu principal</a>
+    <a href="#content" class="sr-only">Aller au contenu principal</a>
     <header>
         <div class="navbar__container grid grid-cols-12 gap-1 text-center">
 
             <!-- component -->
             <nav class=" navbar col-span-12 flex items-center bg-bleu-nuit p-3 flex-wrap">
                 <a href="index.html" class="navbar__brand p-2 mr-4 inline-flex items-center">
-                    <img src="media/logo.jpg" alt="logo" class="navbar__logo w-24 h-24 rounded-full p-4">
+                    <img src="media/logo.jpg" alt="logo" aria-hidden="true"
+                        class="navbar__logo w-24 h-24 rounded-full p-4">
                     <span
                         class="navbar__title font-titre text-xl text-blanc-stellaire font-bold uppercase tracking-wide hover:text-orange-horizon"">Interstellar</span>
                 </a>
                 <button
-                    class="navbar__toggle text-blanc-stellaire inline-flex p-4 hover:bg-blanc-stellaire/25 rounded lg:hidden ml-auto
-                        hover:text-orange-horizon outline-none nav-toggler" data-target="#navigation">
-                        <i class="material-icons !text-4xl">menu</i>
+                    class=" navbar__toggle text-blanc-stellaire inline-flex p-4 hover:bg-blanc-stellaire/25 rounded
+                        lg:hidden ml-auto hover:text-orange-horizon outline-none nav-toggler" data-target="#navigation"
+                        aria-expanded="false">
+                        <i class="material-icons text-4xl!" aria-hidden="true">menu</i>
                         </button>
-                        <div class="navbar__menu hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto" id="navigation">
+                        <div class="navbar__menu hidden top-navbar w-full lg:inline-flex lg:grow lg:w-auto"
+                            id="navigation">
                             <div
                                 class=" navbar__list lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto pr-5 gap-3.5 text-[1.2rem]">
                                 <a href="index.html"
@@ -71,29 +83,97 @@
                         </div>
             </nav>
 
-
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
-                integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-            <script>
-                $(document).ready(function () {
-                    $(".nav-toggler").each(function (_, navToggler) {
-                        var target = $(navToggler).data("target");
-                        $(navToggler).on("click", function () {
-                            $(target).animate({
-                                height: "toggle"
-                            });
-                        });
-                    });
-                });
-
-            </script>
-
-
         </div>
 
     </header>
-    <main>
-        
+    <main id="content">
+        <section
+            class="hero bg-[url(media/hero.jpg)] bg-cover bg-center bg-no-repeat min-h-[50vw] md:min-h-[40vw] lg:min-h-[500px]">
+            <div class="hero__container container mx-auto h-full">
+                <div class="grid grid-cols-12 gap-1 h-full items-center">
+                    <!-- R -->
+                    <div class="hero__content col-span-12  flex flex-col justify-center sm:col-span-5 m-7 gap-6">
+                        <h1
+                            class="hero__title font-titre text-2xl md:text-4xl  text-blanc-stellaire font-bold uppercase">
+                            Interstellar</h1>
+                        <p class="hero__description font-corps text-blanc-stellaire font-normal">Dans un futur proche où
+                            la Terre se
+                            meurt, Cooper, pilote et ancien ingénieur, doit faire le choix le plus difficile de sa vie,
+                            quitter ses enfants pour embarquer dans une mission spatiale désespérée à la recherche d'une
+                            nouvelle planète habitable pour l'humanité.</p>
+                        <form action="#" id="hero__form" class="hero__form flex flex-row gap-7 mt-6 justify-baseline">
+                            <label for="quantite" class="sr-only">Quantité</label>
+                            <input type="number" id="quantite" name="quantite" min="1" placeholder="QUANTITÉ :"
+                                class="hero__input bg-blanc-stellaire/20 border border-blanc-stellaire text-blanc-stellaire text-sm placeholder-blanc-stellaire/60 px-4 py-2 rounded focus:outline-none focus:ring-1 focus:ring-orange-horizon w-[120px] ">
+                            <button type="button" id="hero__btn"
+                                class="hero__btn lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-bleu-nuit font-extrabold items-center justify-center bg-blanc-stellaire hover:bg-blanc-stellaire transition-colors hover:text-orange-horizon">Acheter
+                                maintenant</button>
+                        </form>
+                        <span class="hero__form-msg" id="quantite-msg" aria-live="polite"></span>
+                    </div>
+                    <!-- L -->
+
+                    <div class="hero-carousel-wrapper col-span-12 sm:col-span-7 m-7 flex flex-col items-center gap-4">
+                        <!-- component -->
+                        <!-- Carousel -->
+                        <div class="carousel relative w-full overflow-hidden rounded-lg h-[300px] md:h-[400px]"
+                            role="region" aria-label="Galerie de photos Interstellar">
+                            <div class="carousel__item w-full h-full" aria-hidden="false">
+                                <img src="media/carousel/Carrousel1.jpg"
+                                    class="carousel__img w-full h-full object-cover" alt="Interstellar scene 1">
+                            </div>
+                            <div class="carousel__item carousel__item--hidden hidden w-full h-full" aria-hidden="true">
+                                <img src="media/carousel/Carrousel2.jpg"
+                                    class="carousel__img w-full h-full object-cover" alt="Interstellar scene 2">
+                            </div>
+                            <div class="carousel__item carousel__item--hidden hidden w-full h-full" aria-hidden="true">
+                                <img src="media/carousel/Carrousel3.jpg"
+                                    class="carousel__img w-full h-full object-cover" alt="Interstellar scene 3">
+                            </div>
+                            <div class="carousel__item carousel__item--hidden hidden w-full h-full" aria-hidden="true">
+                                <img src="media/carousel/Carrousel4.jpg"
+                                    class="carousel__img w-full h-full object-cover" alt="Interstellar scene 4">
+                            </div>
+                            <div class="carousel__item carousel__item--hidden hidden w-full h-full" aria-hidden="true">
+                                <img src="media/carousel/Carrousel5.jpg"
+                                    class="carousel__img w-full h-full object-cover" alt="Interstellar scene 5">
+                            </div>
+                            <div class="carousel__item carousel__item--hidden hidden w-full h-full" aria-hidden="true">
+                                <img src="media/carousel/Carrousel6.jpg"
+                                    class="carousel__img w-full h-full object-cover" alt="Interstellar scene 6">
+                            </div>
+                            <div class="carousel__item carousel__item--hidden hidden w-full h-full" aria-hidden="true">
+                                <img src="media/carousel/Carrousel6.jpg"
+                                    class="carousel__img w-full h-full object-cover" alt="Interstellar scene 7">
+                            </div>
+                        </div>
+                        <!-- Dots -->
+                        <div class="carousel__dots flex justify-center gap-4">
+                            <button class="carousel__dot carousel__dot--active w-5 h-5 rounded-full bg-blanc-stellaire"
+                                aria-label="Slide 1" aria-current="true"></button>
+                            <button class="carousel__dot  w-5 h-5 rounded-full bg-blanc-stellaire/40"
+                                aria-label="Slide 2"></button>
+                            <button class="carousel__dot  w-5 h-5  rounded-full bg-blanc-stellaire/40"
+                                aria-label="Slide 3"></button>
+                            <button class="carousel__dot w-5 h-5  rounded-full bg-blanc-stellaire/40"
+                                aria-label="Slide 4"></button>
+                            <button class="carousel__dot  w-5 h-5  rounded-full bg-blanc-stellaire/40"
+                                aria-label="Slide 5"></button>
+                            <button class="carousel__dot  w-5 h-5 rounded-full bg-blanc-stellaire/40"
+                                aria-label="Slide 6"></button>
+                            <button class="carousel__dot w-5 h-5 rounded-full bg-blanc-stellaire/40"
+                                aria-label="Slide 7"></button>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+
     </main>
     <footer>
 

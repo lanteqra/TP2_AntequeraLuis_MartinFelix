@@ -15,6 +15,10 @@
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="js/navbar.js" defer></script>
+
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"
         integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous" />
@@ -39,9 +43,9 @@
 
 <body class="font-corps">
     <!-- Accessibilité -->
-    <a href="#content" class="screen-reader-text">Aller au contenu principal</a>
+    <a href="#content" class="sr-only">Aller au contenu principal</a>
     <header>
-        
+
         <div class="navbar__container grid grid-cols-12 gap-1 text-center">
 
             <!-- component -->
@@ -53,10 +57,12 @@
                 </a>
                 <button
                     class=" text-blanc-stellaire inline-flex p-4 hover:bg-blanc-stellaire/25 rounded lg:hidden ml-auto
-                        hover:text-orange-horizon outline-none nav-toggler" data-target="#navigation">
-                        <i class="material-icons !text-4xl">menu</i>
+                        hover:text-orange-horizon outline-none nav-toggler" data-target="#navigation"
+                        aria-expanded="false">
+                        <i class="material-icons text-4xl!">menu</i>
                         </button>
-                        <div class="navbar__menu hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto" id="navigation">
+                        <div class="navbar__menu hidden top-navbar w-full lg:inline-flex lg:grow lg:w-auto"
+                            id="navigation">
                             <div
                                 class="navbar__list lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto pr-5 gap-3.5 text-[1.2rem]">
                                 <a href="index.html"
@@ -72,22 +78,6 @@
                         </div>
             </nav>
 
-
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
-                integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-            <script>
-                $(document).ready(function () {
-                    $(".nav-toggler").each(function (_, navToggler) {
-                        var target = $(navToggler).data("target");
-                        $(navToggler).on("click", function () {
-                            $(target).animate({
-                                height: "toggle"
-                            });
-                        });
-                    });
-                });
-
-            </script>
 
 
         </div>
