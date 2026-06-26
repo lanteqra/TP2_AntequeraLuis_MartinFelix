@@ -43,11 +43,18 @@
         }
         
         .distribution__card {
-            @apply flex flex-col items-center border-5 border-beige-terre/20 rounded-xl p-6 hover:border-beige-terre/50 transition-colors;
+            @apply flex flex-col h-full items-center border-2 border-beige-terre/20 rounded-xl p-6 hover:border-beige-terre/50 transition-colors;
+        }
+        .distribution__item {
+            @apply h-full;
         }
 
         .distribution__card-img {
             @apply w-full h-[200px] md:h-[250px] lg:h-[300px] object-cover rounded-lg mb-4;
+        }
+        
+        .distribution__card-body {
+            @apply flex flex-col flex-grow;
         }
 
         .distribution__card-name {
@@ -59,11 +66,14 @@
         }
 
         .distribution__card-desc {
-            @apply text-sm text-blanc-stellaire leading-relaxed mb-4;
+            @apply text-sm text-blanc-stellaire leading-relaxed mb-4 grow;
         }
 
         .distribution__card-socials {
-            @apply flex gap-4 list-none p-0 text-beige-terre;
+            @apply flex gap-4 list-none p-0 text-beige-terre pt-3;
+        }
+        .distribution__card-socials__item {
+            @apply hover:text-orange-horizon 
         }
         
     </style>
@@ -196,10 +206,11 @@
 
         </section>
         <!-- cast - distribution -->
-        <section id="distribution" class="distribution bg-noir-espace text-blanc-stellaire"  aria-label="Présentation des acteurs et de l'équipe">
+        <section id="distribution" class="distribution bg-noir-espace text-blanc-stellaire"
+            aria-label="Présentation des acteurs et de l'équipe">
             <div class="distribution__container container mx-auto px-4 h-full">
-                <div class="distribution__grid grid grid-cols-12 gap-5 h-full items-center p-7">
-                    <div class="col-span-12 h-auto pb-6 pt-6">
+                <div class="distribution__grid grid grid-cols-12 gap-5 h-full  items-stretch pt-7 pb-7">
+                    <div class="distribution__header col-span-12 h-auto pb-6 pt-6">
                         <h2 class="distribution__title font-titre text-2xl pb-4 font-bold uppercase tracking-wide">
                             Présentation des acteurs</h2>
                         <p class="distribution__paragraphe">Acteurs et membres de l'équipe qui ont contribué à la
@@ -219,7 +230,7 @@
                                 </p>
                             </div>
                             <ul class="distribution__card-socials" role="list">
-                                <li>
+                                <li class="distribution__card-socials__item">
                                     <a href="https://www.facebook.com/MatthewMcConaughey/"
                                         aria-label="Facebook de Mathew MaConaughey" target="_blank"
                                         rel="noopener noreferrer">
@@ -227,13 +238,13 @@
                                             size='md'></box-icon>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#" aria-label="Twitter de Mathew MaConaughey" target="_blank"
-                                        rel="noopener noreferrer">
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://x.com/McConaughey" aria-label="Twitter de Mathew MaConaughey"
+                                        target="_blank" rel="noopener noreferrer">
                                         <box-icon type='logo' name='twitter' color='currentColor' size='md'></box-icon>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="distribution__card-socials__item">
                                     <a href="https://www.instagram.com/officiallymcconaughey/"
                                         aria-label="Instagram de Mathew MaConaughey" target="_blank"
                                         rel="noopener noreferrer">
@@ -243,15 +254,252 @@
                                 </li>
                             </ul>
                         </article>
+                    </div>
+                    <!-- Carte 2 -->
+                    <div class="distribution__item col-span-6 md:col-span-4 lg:col-span-3 h-auto">
+                        <article class="distribution__card">
+                            <img class="distribution__card-img" src="media/cast/cast2.jpg"
+                                alt="photo de Jessica Chastain">
+                            <div class="distribution__card-body">
+                                <h3 class="distribution__card-name">Jessica Chastain</h3>
+                                <h4 class="distribution__card-role"> Murphy "Murph" Cooper (adulte)</h4>
+                                <p class="distribution__card-desc">
+                                    La fille de Cooper, brillante scientifique à la NASA qui travaille à sauver
+                                    l'humanité depuis la Terre.
+                                </p>
+                            </div>
+                            <ul class="distribution__card-socials" role="list">
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://www.facebook.com/jessicachastainofficial"
+                                        aria-label="Facebook de Jessica Chastain" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <box-icon type='logo' name='facebook-circle' color='currentColor'
+                                            size='md'></box-icon>
+                                    </a>
+                                </li>
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://x.com/jes_chastain" aria-label="Twitter de Jessica Chastain"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <box-icon type='logo' name='twitter' color='currentColor' size='md'></box-icon>
+                                    </a>
+                                </li>
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://www.instagram.com/jessicachastain"
+                                        aria-label="Instagram de Jessica Chastain" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <box-icon name='instagram-alt' type='logo' color='currentColor'
+                                            size='md'></box-icon>
+                                    </a>
+                                </li>
+                            </ul>
                         </article>
                     </div>
-                    <div class="col-span-6 md:col-span-4 lg:col-span-3 h-[100px] bg-blue-500">.</div>
-                    <div class="col-span-6 md:col-span-4 lg:col-span-3 h-[100px] bg-green-500">.</div>
-                    <div class="col-span-6 md:col-span-4 lg:col-span-3 h-[100px] bg-yellow-500">.</div>
-                    <div class="col-span-6 md:col-span-4 lg:col-span-3 h-[100px] bg-red-500">.</div>
-                    <div class="col-span-6 md:col-span-4 lg:col-span-3 h-[100px] bg-blue-500">.</div>
-                    <div class="col-span-6 md:col-start-3 md:col-span-4 lg:col-span-3 h-[100px] bg-green-500">.</div>
-                    <div class="col-span-6 md:col-span-4 lg:col-span-3 h-[100px] bg-yellow-500">.</div>
+                    <!-- Carte 3 -->
+                    <div class="distribution__item col-span-6 md:col-span-4 lg:col-span-3 h-auto">
+                        <article class="distribution__card">
+                            <img class="distribution__card-img" src="media/cast/cast3.jpg"
+                                alt="photo de Anne Hathaway ">
+                            <div class="distribution__card-body">
+                                <h3 class="distribution__card-name">Anne Hathaway</h3>
+                                <h4 class="distribution__card-role">Amelia Brand</h4>
+                                <p class="distribution__card-desc">
+                                    Astronaute et scientifique, fille du Professeur Brand, membre clé de l'équipage.
+                                </p>
+                            </div>
+                            <ul class="distribution__card-socials" role="list">
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://www.facebook.com/Hathaway
+                                    " aria-label="Facebook de Anne Hathaway" target="_blank" rel="noopener noreferrer">
+                                        <box-icon type='logo' name='facebook-circle' color='currentColor'
+                                            size='md'></box-icon>
+                                    </a>
+                                </li>
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://x.com/AnneeJHathaway" aria-label="Twitter de Anne Hathaway"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <box-icon type='logo' name='twitter' color='currentColor' size='md'></box-icon>
+                                    </a>
+                                </li>
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://www.instagram.com/annehathaway"
+                                        aria-label="Instagram de Anne Hathaway" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <box-icon name='instagram-alt' type='logo' color='currentColor'
+                                            size='md'></box-icon>
+                                    </a>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                    <!-- Carte 4 -->
+                    <div class="distribution__item col-span-6 md:col-span-4 lg:col-span-3 h-auto">
+                        <article class="distribution__card">
+                            <img class="distribution__card-img" src="media/cast/cast4.jpg" alt="photo de Mackenzie Foy">
+                            <div class="distribution__card-body">
+                                <h3 class="distribution__card-name">Mackenzie Foy</h3>
+                                <h4 class="distribution__card-role">Murph (enfant)</h4>
+                                <p class="distribution__card-desc">
+                                    version jeune de Murph, curieuse et proche de son père avant son départ.
+                                </p>
+                            </div>
+                            <ul class="distribution__card-socials" role="list">
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://www.facebook.com/groups/1603296753287469/" aria-label="Facebook de Mackenzie Foy" target="_blank" rel="noopener noreferrer">
+                                        <box-icon type='logo' name='facebook-circle' color='currentColor'
+                                            size='md'></box-icon>
+                                    </a>
+                                </li>
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://x.com/mackenziefoy" aria-label="Twitter de Mackenzie Foy"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <box-icon type='logo' name='twitter' color='currentColor' size='md'></box-icon>
+                                    </a>
+                                </li>
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://www.instagram.com/mackenziefoy"
+                                        aria-label="Instagram de Mackenzie Foy" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <box-icon name='instagram-alt' type='logo' color='currentColor'
+                                            size='md'></box-icon>
+                                    </a>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                    <!-- Carte 5 -->
+                    <div class="distribution__item col-span-6 md:col-span-4 lg:col-span-3 h-auto">
+                        <article class="distribution__card">
+                            <img class="distribution__card-img" src="media/cast/cast5.jpg" alt="photo de Michael Caine">
+                            <div class="distribution__card-body">
+                                <h3 class="distribution__card-name">Michael Caine </h3>
+                                <h4 class="distribution__card-role">Professeur Brand</h4>
+                                <p class="distribution__card-desc">
+                                    Physicien génial de la NASA et mentor de Cooper, architecte secret de la mission.
+                                </p>
+                            </div>
+                            <ul class="distribution__card-socials" role="list">
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://www.facebook.com/michaelcaineofficial/" aria-label="Facebook de Michael Caine" target="_blank" rel="noopener noreferrer">
+                                        <box-icon type='logo' name='facebook-circle' color='currentColor'
+                                            size='md'></box-icon>
+                                    </a>
+                                </li>
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://x.com/themichaelcaine" aria-label="Twitter de Michael Caine"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <box-icon type='logo' name='twitter' color='currentColor' size='md'></box-icon>
+                                    </a>
+                                </li>
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://www.instagram.com/popular/micheal-caine/"
+                                        aria-label="Instagram de Michael Caine" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <box-icon name='instagram-alt' type='logo' color='currentColor'
+                                            size='md'></box-icon>
+                                    </a>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                    <!-- Carte 6 -->
+                    <div class="distribution__item col-span-6 md:col-span-4 lg:col-span-3 h-auto">
+                        <article class="distribution__card">
+                            <img class="distribution__card-img" src="media/cast/cast6.webp" alt="photo de Bill Irwin - TARS">
+                            <div class="distribution__card-body">
+                                <h3 class="distribution__card-name">Bill Irwin</h3>
+                                <h4 class="distribution__card-role">TARS (voix)</h4>
+                                <p class="distribution__card-desc">
+                                    Robot de combat reconverti en assistant de l'équipage, loyal et sarcastique.
+                                </p>
+                            </div>
+                            <ul class="distribution__card-socials" role="list">
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://www.facebook.com/search/top/?q=Bill%20Irwin" aria-label="Facebook de Bill Irwin" target="_blank" rel="noopener noreferrer">
+                                        <box-icon type='logo' name='facebook-circle' color='currentColor'
+                                            size='md'></box-icon>
+                                    </a>
+                                </li>
+                                
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://www.instagram.com/popular/actor-bill-irwin/"
+                                        aria-label="Instagram de Bill Irwin" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <box-icon name='instagram-alt' type='logo' color='currentColor'
+                                            size='md'></box-icon>
+                                    </a>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                    <!-- Carte 7 -->
+                    <div class="distribution__item col-span-6 md:col-start-3 md:col-span-4 lg:col-span-3 h-auto">
+                        <article class="distribution__card">
+                            <img class="distribution__card-img" src="media/cast/cast7.webp" alt="photo de Matt Damon">
+                            <div class="distribution__card-body">
+                                <h3 class="distribution__card-name">Matt Damon</h3>
+                                <h4 class="distribution__card-role">Dr. Mann</h4>
+                                <p class="distribution__card-desc">
+                                    Chef de la première expédition spatiale, dont la vraie nature se révèle tardivement dans le film.
+                                </p>
+                            </div>
+                            <ul class="distribution__card-socials" role="list">
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://www.facebook.com/OfficialMattDamon/" aria-label="Facebook de Matt Damon" target="_blank" rel="noopener noreferrer">
+                                        <box-icon type='logo' name='facebook-circle' color='currentColor'
+                                            size='md'></box-icon>
+                                    </a>
+                                </li>
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://x.com/RealMattDamon" aria-label="Twitter de Matt Damon"
+                                        target="_blank" rel="noopener noreferrer">
+                                        <box-icon type='logo' name='twitter' color='currentColor' size='md'></box-icon>
+                                    </a>
+                                </li>
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://www.instagram.com/matt_damon_official/"
+                                        aria-label="Instagram de Matt Damon" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <box-icon name='instagram-alt' type='logo' color='currentColor'
+                                            size='md'></box-icon>
+                                    </a>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="distribution__item col-span-6 md:col-span-4 lg:col-span-3 h-auto">
+                        <article class="distribution__card">
+                            <img class="distribution__card-img" src="media/cast/realisateur.jpg" alt="photo de Christopher Nolan ">
+                            <div class="distribution__card-body">
+                                <h3 class="distribution__card-name">Christopher Nolan </h3>
+                                <h4 class="distribution__card-role">Réalisateur et co-scénariste</h4>
+                                <p class="distribution__card-desc">
+                                    Pour Interstellar, Nolan souhaitait explorer la relativité et les trous de ver de manière scientifiquement rigoureuse, tout en racontant une histoire profondément humaine sur l'amour et le sacrifice.
+                                </p>
+                            </div>
+                            <ul class="distribution__card-socials" role="list">
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://www.facebook.com/ChristopherNolanUK/" aria-label="Facebook de Christopher Nolan" target="_blank" rel="noopener noreferrer">
+                                        <box-icon type='logo' name='facebook-circle' color='currentColor'
+                                            size='md'></box-icon>
+                                    </a>
+                                </li>
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://x.com/NolanAnalyst" aria-label="Twitter de Christopher Nolan "
+                                        target="_blank" rel="noopener noreferrer">
+                                        <box-icon type='logo' name='twitter' color='currentColor' size='md'></box-icon>
+                                    </a>
+                                </li>
+                                <li class="distribution__card-socials__item">
+                                    <a href="https://www.instagram.com/christophernolann"
+                                        aria-label="Instagram de Christopher Nolan" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <box-icon name='instagram-alt' type='logo' color='currentColor'
+                                            size='md'></box-icon>
+                                    </a>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
