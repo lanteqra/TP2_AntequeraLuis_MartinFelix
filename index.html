@@ -19,6 +19,9 @@
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="js/navbar.js" defer></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"
         integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous" />
@@ -28,6 +31,7 @@
         rel="stylesheet" type="text/css" />
     <script src="js/carousel.js" defer></script>
     <script src="js/achatValide.js" defer></script>
+    <script src="js/castCards.js" defer></script>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -42,8 +46,13 @@
             --font-corps: "Inter", sans-serif;
         }
         
+        .navbar__title, .hero__title {
+            @apply font-titre;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+        }
+
         .distribution__card {
-            @apply flex flex-col h-full items-center border-2 border-beige-terre/20 rounded-xl p-6 hover:border-beige-terre/50 transition-colors;
+            @apply flex flex-col h-full items-center border-2 border-beige-terre/20 bg-bleu-nuit rounded-xl p-6 hover:border-beige-terre/50 hover:scale-105 transition-all duration-300;
         }
         .distribution__item {
             @apply h-full;
@@ -200,10 +209,10 @@
                     </div>
 
                 </div>
+            
             </div>
-
-
-        </section>
+        </section> 
+        
         <!-- cast - distribution -->
         <section id="distribution" class="distribution bg-noir-espace text-blanc-stellaire"
             aria-label="Présentation des acteurs et de l'équipe">
@@ -343,7 +352,6 @@
                             </div>
                             <ul class="distribution__card-socials" role="list">
                                 <li class="distribution__card-socials__item">
-                                    <a href="https://www.facebook.com/groups/1603296753287469/" aria-label="Facebook de Mackenzie Foy" target="_blank" rel="noopener noreferrer">
                                         <box-icon type='logo' name='facebook-circle' color='currentColor'
                                             size='md'></box-icon>
                                     </a>
@@ -378,7 +386,6 @@
                             </div>
                             <ul class="distribution__card-socials" role="list">
                                 <li class="distribution__card-socials__item">
-                                    <a href="https://www.facebook.com/michaelcaineofficial/" aria-label="Facebook de Michael Caine" target="_blank" rel="noopener noreferrer">
                                         <box-icon type='logo' name='facebook-circle' color='currentColor'
                                             size='md'></box-icon>
                                     </a>
@@ -403,7 +410,6 @@
                     <!-- Carte 6 -->
                     <div class="distribution__item col-span-6 md:col-span-4 lg:col-span-3 h-auto">
                         <article class="distribution__card">
-                            <img class="distribution__card-img" src="media/cast/cast6.webp" alt="photo de Bill Irwin - TARS">
                             <div class="distribution__card-body">
                                 <h3 class="distribution__card-name">Bill Irwin</h3>
                                 <h4 class="distribution__card-role">TARS (voix)</h4>
@@ -418,11 +424,10 @@
                                             size='md'></box-icon>
                                     </a>
                                 </li>
-                                
+
                                 <li class="distribution__card-socials__item">
                                     <a href="https://www.instagram.com/popular/actor-bill-irwin/"
-                                        aria-label="Instagram de Bill Irwin" target="_blank"
-                                        rel="noopener noreferrer">
+                                        aria-label="Instagram de Bill Irwin" target="_blank" rel="noopener noreferrer">
                                         <box-icon name='instagram-alt' type='logo' color='currentColor'
                                             size='md'></box-icon>
                                     </a>
@@ -438,12 +443,14 @@
                                 <h3 class="distribution__card-name">Matt Damon</h3>
                                 <h4 class="distribution__card-role">Dr. Mann</h4>
                                 <p class="distribution__card-desc">
-                                    Chef de la première expédition spatiale, dont la vraie nature se révèle tardivement dans le film.
+                                    Chef de la première expédition spatiale, dont la vraie nature se révèle tardivement
+                                    dans le film.
                                 </p>
                             </div>
                             <ul class="distribution__card-socials" role="list">
                                 <li class="distribution__card-socials__item">
-                                    <a href="https://www.facebook.com/OfficialMattDamon/" aria-label="Facebook de Matt Damon" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://www.facebook.com/OfficialMattDamon/"
+                                        aria-label="Facebook de Matt Damon" target="_blank" rel="noopener noreferrer">
                                         <box-icon type='logo' name='facebook-circle' color='currentColor'
                                             size='md'></box-icon>
                                     </a>
@@ -456,8 +463,7 @@
                                 </li>
                                 <li class="distribution__card-socials__item">
                                     <a href="https://www.instagram.com/matt_damon_official/"
-                                        aria-label="Instagram de Matt Damon" target="_blank"
-                                        rel="noopener noreferrer">
+                                        aria-label="Instagram de Matt Damon" target="_blank" rel="noopener noreferrer">
                                         <box-icon name='instagram-alt' type='logo' color='currentColor'
                                             size='md'></box-icon>
                                     </a>
@@ -468,17 +474,22 @@
                     <!-- Carte 8 -->
                     <div class="distribution__item col-span-6 md:col-span-4 lg:col-span-3 h-auto">
                         <article class="distribution__card">
-                            <img class="distribution__card-img" src="media/cast/realisateur.jpg" alt="photo de Christopher Nolan ">
+                            <img class="distribution__card-img" src="media/cast/realisateur.jpg"
+                                alt="photo de Christopher Nolan ">
                             <div class="distribution__card-body">
                                 <h3 class="distribution__card-name">Christopher Nolan </h3>
                                 <h4 class="distribution__card-role">Réalisateur et co-scénariste</h4>
                                 <p class="distribution__card-desc">
-                                    Pour Interstellar, Nolan souhaitait explorer la relativité et les trous de ver de manière scientifiquement rigoureuse, tout en racontant une histoire profondément humaine sur l'amour et le sacrifice.
+                                    Pour Interstellar, Nolan souhaitait explorer la relativité et les trous de ver de
+                                    manière scientifiquement rigoureuse, tout en racontant une histoire profondément
+                                    humaine sur l'amour et le sacrifice.
                                 </p>
                             </div>
                             <ul class="distribution__card-socials" role="list">
                                 <li class="distribution__card-socials__item">
-                                    <a href="https://www.facebook.com/ChristopherNolanUK/" aria-label="Facebook de Christopher Nolan" target="_blank" rel="noopener noreferrer">
+                                    <a href="https://www.facebook.com/ChristopherNolanUK/"
+                                        aria-label="Facebook de Christopher Nolan" target="_blank"
+                                        rel="noopener noreferrer">
                                         <box-icon type='logo' name='facebook-circle' color='currentColor'
                                             size='md'></box-icon>
                                     </a>
