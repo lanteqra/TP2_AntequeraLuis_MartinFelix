@@ -39,7 +39,7 @@ Dans le cadre du cours Techniques d'intégration des interfaces Web 2, ce travai
 - Javascript (animations)
     - Animation Js :
         - Carousel personnalisé avec auto-slide et dots de navigation - js/carousel.js
-        - 
+        - Cartes distribution avec GSAP ScrollTrigger - js/castCards.js
 
 **note :** Tous les composants Tailwind (navbar, carrousel, accordéon) ainsi que les 
 animations CSS et JavaScript utilisées dans ce projet ont été modifiés et 
@@ -50,11 +50,11 @@ visuelle du projet (palette de couleurs, typographies et thème Interstellar).
 
 | Membre     | Tâche réalisée |
 |------------|----------------|
-| Luis       |  Configuration initiale du projet (Tailwind, structure HTML)     |
+| Luis       |  Configuration initiale du projet (Tailwind, structure HTML) |
 | Luis       |  Navbar responsive (grille, menu hamburger, palette de couleurs) - Correction du contraste WCAG sur la navbar    |
-| Félix      |  Footer          |
-| Luis       | hero - carrousel|
-|------------|----------------|
+| Félix      |  Footer        |
+| Luis       | index : Section hero - carrousel avec animation |
+| Luis       | index : Section distribution avec animation |
 |------------|----------------|
 
 
