@@ -6,15 +6,15 @@ let current = 0;
 
 function goTo(index) {
     items[current].classList.add('hidden');
-    dots[current].classList.remove('carousel__dot--active', 'bg-blanc-stellaire');
-    dots[current].classList.add('bg-blanc-stellaire/40');
+    dots[current].classList.remove('carousel__dot--active', 'bg-noir-espace');
+    dots[current].classList.add('bg-noir-espace/40');
 
 
     current = index;
 
     items[current].classList.remove('hidden');
-    dots[current].classList.add('carousel__dot--active', 'bg-blanc-stellaire');
-    dots[current].classList.remove('bg-blanc-stellaire/40');
+    dots[current].classList.add('carousel__dot--active', 'bg-noir-espace');
+    dots[current].classList.remove('bg-noir-espace/40');
 }
 
 dots.forEach((dot, i) => {

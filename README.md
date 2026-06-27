@@ -52,9 +52,9 @@ visuelle du projet (palette de couleurs, typographies et thème Interstellar).
 |------------|----------------|
 | Luis       |  Configuration initiale du projet (Tailwind, structure HTML)     |
 | Luis       |  Navbar responsive (grille, menu hamburger, palette de couleurs) - Correction du contraste WCAG sur la navbar    |
-| Félix      |  Footer          |
-| Luis       | hero - carrousel|
-|------------|----------------|
+| Félix      |  Footer        |
+| Luis       | index : Section hero - carrousel|
+| Luis       | index : Section distribution |
 |------------|----------------|
 
 
