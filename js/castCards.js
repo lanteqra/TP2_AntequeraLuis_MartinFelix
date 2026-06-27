@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
             y: 0,
             opacity: 1,
             duration: 5,
-            ease: "back.out(1.5)",
+            ease: "elastic.out(1, 0.5)",
             stagger: 0.15,
             scrollTrigger: {
                 trigger: "#distribution",
