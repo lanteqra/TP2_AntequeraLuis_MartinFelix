@@ -28,7 +28,7 @@ Dans le cadre du cours Techniques d'intégration des interfaces Web 2, ce travai
 - HTML5 sémantique
 - CSS3 (méthodologie BEM, animations)
     - Animations CSS :
-        - 
+        - Section Images et extraits :  apparition en cascade des images avec "fadeScaleIn" et apparition de la vidéo avec "fadeIn", avec des délais échelonnés. Effet de zoom et luminosité au survol des images. Le "z-index" au survol permet à l'image sélectionnée de passer au premier plan. Toutes les animations utilisent "cubic-bezier(0.16, 1, 0.3, 1)" pour un rendu fluide. (Styles déclares dans style.css)
         - 
 
 - Composants Tailwind :
@@ -53,8 +53,9 @@ visuelle du projet (palette de couleurs, typographies et thème Interstellar).
 | Luis       |  Configuration initiale du projet (Tailwind, structure HTML) |
 | Luis       |  Navbar responsive (grille, menu hamburger, palette de couleurs) - Correction du contraste WCAG sur la navbar    |
 | Félix      |  Footer        |
-| Luis       | index : Section hero - carrousel avec animation |
-| Luis       | index : Section distribution avec animation |
+| Luis       | index : Section hero - carrousel avec animation js |
+| Luis       | index : Section distribution avec animation Js|
+| Luis       | index : Section images-extraits avec animation CSS|
 |------------|----------------|
 
 
