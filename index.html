@@ -234,8 +234,8 @@
                         <p class="images-extraits__paragraphe">Découvrez les scènes les plus épiques et les extraits
                             exclusifs de nos tournages.</p>
 
-                        <form id="images-extraits__form" class="images-extraits__subscribe flex flex-row gap-7 mt-6 justify-baseline" action="#">
-                            <label for="sub-email" class="images-extraits__label sr-only">
+                        <form id="images-extraits__form" class="images-extraits__subscribe flex flex-row gap-7 mt-6 justify-baseline" action="#" aria-label="Formulaire d'inscription à l'infolettre">
+                            <label for="subEmail" class="images-extraits__label sr-only">
                                 Courriel :</label>
                             <input
                                 class="images-extraits__input bg-blanc-stellaire/20 border border-blanc-stellaire text-blanc-stellaire text-sm placeholder-blanc-stellaire/60 px-4 py-2 rounded focus:outline-none focus:ring-1 focus:ring-orange-horizon lg:inline-flex lg:w-auto w-full focus-visible"
@@ -244,12 +244,12 @@
                             <button type="submit" id="images-extraits__btn"
                                 class="images-extraits__btn lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-bleu-nuit font-extrabold items-center justify-center bg-blanc-stellaire hover:bg-blanc-stellaire transition-colors hover:text-orange-horizon focus-visible">S'inscrire</button>
                         </form>
-                        <span class="images-extraits__form-msg" id="sub-email-msg" aria-live="polite"></span>
+                        <span class="images-extraits__form-msg" id="sub-email-msg" role="status" aria-live="polite"></span>
 
                     </div>
                     <!-- img 1 -->
                     <div class="h-[300px] col-span-12 md:col-span-6 lg:col-span-4">
-                        <figure class="images-extraits__figure images-extraits__figure--delay-1 h-full">
+                        <figure class="images-extraits__figure images-extraits__figure--delay-1 h-full" role="figure" aria-label="Scène du film Interstellar">
                             <div class="images-extraits__img-wrapper overflow-hidden h-[250px] rounded-lg mb-4 shadow-xl shadow-blanc-stellaire/20">
                                 <img class="images-extraits__img w-full h-full object-cover"
                                     src="media/extraits/extrait-1.jpg"
@@ -264,7 +264,7 @@
                     </div>
                     <!-- img 2 -->
                     <div class="h-[300px] col-span-12 md:col-span-6 lg:col-span-4">
-                        <figure class="images-extraits__figure images-extraits__figure--delay-2 h-full">
+                        <figure class="images-extraits__figure images-extraits__figure--delay-2 h-full" role="figure" aria-label="Scène du film Interstellar">
                             <div class="images-extraits__img-wrapper overflow-hidden h-[250px] rounded-lg mb-4 shadow-xl shadow-blanc-stellaire/20">
                                 <img class="images-extraits__img w-full h-full object-cover"
                                     src="media/extraits/extrait-2.jpg"
@@ -279,7 +279,7 @@
                     </div>
                     <!-- img 3 -->
                     <div class="h-[300px] col-span-12 md:col-span-6 lg:col-span-4">
-                        <figure class="images-extraits__figure images-extraits__figure--delay-3 h-full">
+                        <figure class="images-extraits__figure images-extraits__figure--delay-3 h-full" role="figure" aria-label="Scène du film Interstellar">
                             <div class="images-extraits__img-wrapper overflow-hidden h-[250px] rounded-lg mb-4 shadow-xl shadow-blanc-stellaire/20">
                                 <img class="images-extraits__img w-full h-full object-cover"
                                     src="media/extraits/extrait-3.jpg"
@@ -295,7 +295,7 @@
                     <!-- vid -->
                     <div class="images-extraits__video-wrapper images-extraits__video-wrapper--delay h-auto col-span-12 md:col-span-6 lg:col-start-3 lg:col-span-8">
                         <div class="images-extraits__video-embed relative pb-[56.25%] h-0 overflow-hidden md:pb-0 md:h-[300px] lg:pb-[56.25%] lg:h-0 rounded-lg mb-4 shadow-xl shadow-blanc-stellaire/20">
-                            <iframe class="absolute top-0 left-0 w-full h-full"
+                            <iframe class="absolute top-0 left-0 w-full h-full" aria-label="Bande-annonce du film Interstellar" 
                                 src="https://www.youtube.com/embed/Rt2LHkSwdPQ?si=uaNE9ZEa56b6SaXD"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
