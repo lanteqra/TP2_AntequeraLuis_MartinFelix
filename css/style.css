@@ -1,1 +1,76 @@
 @import "tailwindcss";
+
+/* -------- Animation section images-extraits --------- */
+
+@keyframes fadeScaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Images */
+.images-extraits__figure {
+    position: relative;
+    z-index: 0;
+    animation: fadeScaleIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+}
+
+.images-extraits__figure--delay-1 {
+    animation-delay: 0.4s;
+}
+
+.images-extraits__figure--delay-2 {
+    animation-delay: 0.8s;
+}
+
+.images-extraits__figure--delay-3 {
+    animation-delay: 1.2s;
+}
+
+/* Hover sur les images */
+.images-extraits__img-wrapper {
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.images-extraits__img-wrapper:hover {
+    transform: scale(1.2);
+    
+}
+
+.images-extraits__figure:hover {
+    z-index: 10;
+}
+
+.images-extraits__img {
+    transition: filter 0.4s ease;
+}
+
+.images-extraits__img:hover {
+    filter: brightness(1.1);
+}
+
+/* Video */
+.images-extraits__video-wrapper {
+    animation: fadeScaleIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards;
+    opacity: 0;
+}
+
+.images-extraits__video-wrapper--delay {
+    animation-delay: 1.6s;
+}
