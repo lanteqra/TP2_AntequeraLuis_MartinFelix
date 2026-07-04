@@ -48,22 +48,8 @@
         .distribution__card-socials__link, .footer__social-link {
             @apply focus-visible:outline-2 focus-visible:outline-orange-horizon focus-visible:outline-offset-2;
         }
-
-    </style>
-    <style type="text/tailwindcss">
-        @theme {
-            --color-noir-espace: #010101;
-            --color-bleu-nuit: #0D1B2A;
-            --color-beige-terre: #C8A97E;
-            --color-orange-horizon: #FF8C00;
-            --color-blanc-stellaire: #E8E0D0;
-            --font-titre: "GFS Didot", serif;
-            --font-corps: "Inter", sans-serif;
-        }
-        
-    .navbar__title {
-            @apply font-titre;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+        .focus-visible {
+            @apply focus-visible:outline-2 focus-visible:outline-orange-horizon focus-visible:outline-offset-2;
         }
 
     </style>
@@ -117,9 +103,7 @@
                 <div class="fait-divers__grid grid grid-cols-12 gap-2 h-full items-center">
                     <!-- R -->
                     <div class="fait-divers__img-wrapper col-span-12 lg:col-span-6 order-2 lg:order-1 h-auto">
-                        <!-- img relative au fait divers -->
-                        <img class="fait-divers__img" src="media/Fait divers/Fait-divers1.png"
-                            alt="photo d'un astronaute">
+                        <img class="fait-divers__img" src="media/extraits/extrait-2.jpg" alt="photo d'un astronaute">
 
                     </div>
                     <!-- L -->
@@ -132,30 +116,34 @@
                         </h2>
                         <p class="fait-divers__paragraphe pb-4"> Un voyage spatial épique qui a conquis le monde entier.
                         </p>
-                        <div class="fait-divers__sous-grid grid grid-cols-12 gap-2 h-full items-center">
+                        <div class="fait-divers__stats grid grid-cols-12 gap-2 h-full items-center p-7">
                             <div class="fait-divers__info col-span-6 h-[100px] bg-amber-200 flex items-center p-2">
                                 <p><span class="font-bold text-bleu-nuit">Sortie :</span> 7 Novembre 2014.</p>
                             </div>
-                            <div class="fait-divers__info col-span-6 h-[100px] bg-amber-300 flex items-center p-2">
+                            <div class="fait-divers__stat col-span-6 h-[100px] bg-amber-300 flex items-center p-2">
                                 <p><span class="font-bold text-bleu-nuit">Profits :</span> $790,651,189</p>
                             </div>
-                            <div class="fait-divers__info col-span-6 h-[100px] bg-amber-400 flex items-center p-2">
+                            <div class="fait-divers__stat col-span-6 h-[100px] bg-amber-400 flex items-center p-2">
                                 <p> <span class="font-bold text-bleu-nuit">Prix reçu et disctinctions : </span>5 Autres:
                                     Interstellaire est le dixième film le plus rentable de l'année
                                     2014</p>
                             </div>
-                            <div class="fait-divers__info col-span-6 h-[100px] bg-amber-500 flex items-center p-2">
+                            <div class="fait-divers__stat col-span-6 h-[100px] bg-amber-500 flex items-center p-2">
                                 <p><span class="font-bold text-bleu-nuit">Durée :</span> 169 Minutes</p>
                             </div>
                         </div>
-                        <div class="flex justify-center mt-4">
-                            <a href="#"
-                                class="bg-beige-terre hover:bg-blanc-stellaire text-blue-nuit hover:text-orange-horizon font-bold py-2 px-6 rounded">Apprendre
+                        <div class="fait-divers__cta flex justify-center mt-4">
+                            <a href="#" class="fait-divers__btn bg-beige-terre hover:bg-blanc-stellaire text-blue-nuit hover:text-orange-horizon font-bold py-2 px-6 rounded focus-visible
+ ">Apprendre
                                 plus</a>
                         </div>
-
                     </div>
+
+                </div>
+
+            </div>
         </section>
+
     </main>
     <footer class="footer bg-bleu-nuit text-blanc-stellaire font-corps">
         <div class="footer__container container mx-auto px-4 py-8">
