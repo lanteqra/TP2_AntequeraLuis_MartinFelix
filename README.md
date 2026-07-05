@@ -39,7 +39,8 @@ Dans le cadre du cours Techniques d'intégration des interfaces Web 2, ce travai
 - Javascript (animations)
   - Animation Js :
     - Carousel personnalisé avec auto-slide et dots de navigation - js/carousel.js
-    - Cartes distribution avec GSAP ScrollTrigger - js/castCards.js
+    - Cartes distribution animation sur la "y" avec GSAP ScrollTrigger - js/castCards.js - https://gsap.com/docs/v3/Plugins/ScrollTrigger/
+    - images animation sur la "x" avec GSAP ScrollTrigger - js/bloopersImg.js - https://gsap.com/docs/v3/Plugins/ScrollTrigger/
 
 **note :** Tous les composants Tailwind (navbar, carrousel, accordéon) ainsi que les
 animations CSS et JavaScript utilisées dans ce projet ont été modifiés et
