@@ -24,6 +24,10 @@
         integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/bloopersImg.js" defer></script>
+
     <link rel="stylesheet" href="css/style.css">
     <style type="text/tailwindcss">
         @theme {
@@ -34,8 +38,14 @@
             --color-blanc-stellaire: #E8E0D0;
             --font-titre: "GFS Didot", serif;
             --font-corps: "Inter", sans-serif;
+            
         }
-        
+        .tournage-bloopers__img-wrapper {
+            @apply w-full ;
+        }
+        .tournage-bloopers__img {
+            @apply w-full h-[200px] md:h-[250px] lg:h-[300px] object-cover rounded-lg hover:border-2 hover:border-beige-terre hover:scale-110 transition-all duration-300 shadow-lg shadow-beige-terre/20 ;
+        }
     .navbar__title {
             @apply font-titre;
             text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
@@ -152,6 +162,52 @@
                 </div>
             </div>
         </section>
+        <!-- Section tournage-bloopers -->
+        <section id="tournageBloopers" class="tournage-bloopers bg-bleu-nuit pb-7">
+            <div class="tournage-bloopers__container container mx-auto px-4">
+                <div class="tournage-bloopers__grid grid grid-cols-12 gap-7 h-full items-center">
+                    <!-- Section header -->
+                    <div class="tournage-bloopers__header col-span-12 pb-6 pt-6 h-auto">
+                        <h2
+                            class="tournage-bloopers__title font-titre text-beige-terre text-2xl pb-4 font-bold uppercase tracking-wide">
+
+                            Tournage & Bloopers
+                        </h2>
+                    </div>
+                    <!-- img 1 -->
+                    <div class="tournage-bloopers__img-wrapper col-span-6 lg:col-span-4 h-auto">
+                        <img class="tournage-bloopers__img" src="media/tournage/tournage-1.jpg"
+                            alt="studio de tournage">
+                    </div>
+                    <!-- img 2 -->
+                    <div class="tournage-bloopers__img-wrapper col-span-6 lg:col-span-4 h-auto">
+                        <img class="tournage-bloopers__img" src="media/tournage/tournage-2.jpg"
+                            alt="plan sur le vaisseau spatial">
+                    </div>
+                    <!-- img 3 -->
+                    <div class="tournage-bloopers__img-wrapper col-start-4 col-span-6 lg:col-span-4 h-auto">
+                        <img class="tournage-bloopers__img" src="media/tournage/tournage-3.jpg"
+                            alt="reconstitution d'une navette spatial">
+                    </div>
+                    <!-- img 4 -->
+                    <div class="tournage-bloopers__img-wrapper col-span-6 lg:col-span-4 h-auto">
+                        <img class="tournage-bloopers__img" src="media/tournage/tournage-4.jpg"
+                            alt="préparation des caméras dans un paysage désertique">
+                    </div>
+                    <!-- img 5 -->
+                    <div class="tournage-bloopers__img-wrapper col-span-6 lg:col-span-4 h-auto">
+                        <img class="tournage-bloopers__img" src="media/tournage/tournage-5.jpg"
+                            alt="tournage d'une scène avec le personnage principal">
+                    </div>
+                    <!-- img 6 -->
+                    <div class="tournage-bloopers__img-wrapper col-start-4 col-span-6 lg:col-span-4 h-auto">
+                        <img class="tournage-bloopers__img" src="media/tournage/tournage-6.jpg"
+                            alt="tournage avec le personnage principal et sa fille">
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
 
     </main>
