@@ -61,7 +61,13 @@
         .focus-visible {
             @apply focus-visible:outline-2 focus-visible:outline-orange-horizon focus-visible:outline-offset-2;
         }
-
+        .anecdotes__accordion-item {
+            @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+        }
+ 
+        .anecdotes__accordion-trigger {
+            @apply transition-all duration-300 hover:bg-bleu-nuit/80 hover:pl-6
+        }
     </style>
 
 </head>
@@ -163,7 +169,7 @@
             </div>
         </section>
         <!-- Section tournage-bloopers -->
-        <section id="tournageBloopers" class="tournage-bloopers bg-bleu-nuit pb-7">
+        <section id="tournageBloopers" class="tournage-bloopers bg-bleu-nuit pb-10">
             <div class="tournage-bloopers__container container mx-auto px-4">
                 <div class="tournage-bloopers__grid grid grid-cols-12 gap-7 h-full items-center">
                     <!-- Section header -->
@@ -207,7 +213,342 @@
                 </div>
             </div>
         </section>
+        <!-- Section anecdotes -->
+        <section id="anecdotes" class="anecdotes bg-noir-espace pb-7">
+            <div class="anecdotes__container container mx-auto px-4">
+                <div class="anecdotes__grid grid grid-cols-12 gap-2 h-full items-center">
+                    <!-- Section header -->
+                    <div class="anecdotes__header col-span-12 pb-6 pt-6 h-auto">
+                        <h2
+                            class="anecdotes__title font-titre text-beige-terre text-2xl font-bold uppercase tracking-wide">
+                            Anecdotes du film
+                        </h2>
 
+                    </div>
+                    <!-- accordions-wrapper 1 -->
+                    <div
+                        class="anecdotes__accordion-wrapper anecdotes__accordion-wrapper--gauche col-span-12  lg:col-span-6 h-auto p-3.5 flex flex-col gap-4">
+                        <!-- accordions Composants Tailwind 5 fois-->
+                        <!-- Accordion 1 -->
+                        <div class="anecdotes__accordion-item bg-blanc-stellaire rounded-lg shadow-lg overflow-hidden">
+                            <input type="checkbox" id="accordion1" class="anecdotes__accordion-input peer hidden">
+                            <label for="accordion1"
+                                class="anecdotes__accordion-trigger flex items-center justify-between p-4 bg-bleu-nuit text-blanc-stellaire cursor-pointer hover:bg-bleu-nuit/80 transition-colors">
+                                <span class="anecdotes__accordion-title text-lg font-semibold">Le film abandonné de
+                                    Steven Spielberg</span>
+                                <svg class="anecdotes__accordion-icon w-6 h-6 transition-transform peer-checked:rotate-180"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </label>
+                            <div
+                                class="anecdotes__accordion-content max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-screen">
+                                <div class="p-4">
+                                    <p class="text-noir-espace leading-relaxed">Sorti en 2014, Interstellar était en
+                                        fait dans les cartons d’Hollywood depuis un bon moment. Développée par la
+                                        productrice Lydia Obst et le physicien Kip Thorne, l’intrigue de départ avait
+                                        déjà intéressé Steven Spielberg en 2006. Il engage Jonathan Nolan, qui n’est
+                                        autre que le frère de Christopher Nolan, pour rédiger le scénario et prévoit de
+                                        le réaliser lui-même.</p>
+                                    <p class="text-noir-espace leading-relaxed">Dans la foulée, les studios Dreamworks -
+                                        dont Spielberg
+                                        est l’un des fondateurs - sont vendus à Disney et le réalisateur d’E.T se
+                                        retire. Le projet est confié en 2012 à Christopher Nolan qui fait ses propres
+                                        ajustements sur le scénario et transforme complètement le film. Toujours visible
+                                        dans les archives des studios, le scénario d’origine n’a rien voir avec l’œuvre
+                                        sortie en salles. Murphy, la fille du héros, était un garçon, les astronautes
+                                        auraient du être confrontés à des robots sur une planète de glace, une romance
+                                        était prévue entre Cooper (Matthew McConaughey) et Amelia (Anne Hathaway)… En
+                                        bref, si l’on ne pourra jamais savoir quelle version aurait été la meilleure,
+                                        les studios n’ont pas perdu au change avec celle de Nolan.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion 2 -->
+                        <div class="anecdotes__accordion-item bg-blanc-stellaire rounded-lg shadow-lg overflow-hidden">
+                            <input type="checkbox" id="accordion2" class="anecdotes__accordion-input peer hidden">
+                            <label for="accordion2"
+                                class="anecdotes__accordion-trigger flex items-center justify-between p-4 bg-bleu-nuit text-blanc-stellaire cursor-pointer hover:bg-bleu-nuit/80 transition-colors">
+                                <span class="anecdotes__accordion-title text-lg font-semibold">Science et cinéma</span>
+                                <svg class="anecdotes__accordion-icon w-6 h-6 transition-transform peer-checked:rotate-180"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </label>
+                            <div
+                                class="anecdotes__accordion-content max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-screen">
+                                <div class="p-4">
+                                    <p class="text-noir-espace leading-relaxed">
+                                    <p>De nouveau, Christopher Nolan joue avec
+                                        les notions de temps et d’espace pour créer une histoire à la fois
+                                        sensationnelle et déroutante. Mais Interstellar n’est pas dénué de vérité. Le
+                                        physicien Kip Thorne a également été engagé en tant que consultant sur le film
+                                        afin d’assurer sa vraisemblance lors de la réécriture du scénario mais aussi de
+                                        la création des effets spéciaux. </p>
+                                    <p class="text-noir-espace leading-relaxed">Le scientifique avait deux mots d’ordre
+                                        : rien
+                                        ne doit violer les lois établies de la physique, et toutes les spéculations
+                                        évoquées dans le film se doivent de provenir de la science et non pas de
+                                        l'esprit créatif d'un scénariste. Christopher Nolan a également fait appel à
+                                        l’ancienne astronaute Marsha Ivins afin qu’elle partage son expérience avec
+                                        l’équipe technique et les acteurs. Nul ne sait si la plongée dans un trou de ver
+                                        ressemblerait réellement à ce que l’on peut voir dans Interstellar, mais le film
+                                        a tenté de se rapprocher au plus près de la réalité.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion 3 -->
+                        <div class="anecdotes__accordion-item bg-blanc-stellaire rounded-lg shadow-lg overflow-hidden">
+                            <input type="checkbox" id="accordion3" class="anecdotes__accordion-input peer hidden">
+                            <label for="accordion3"
+                                class="anecdotes__accordion-trigger flex items-center justify-between p-4 bg-bleu-nuit text-blanc-stellaire cursor-pointer hover:bg-bleu-nuit/80 transition-colors">
+                                <span class="anecdotes__accordion-title text-lg font-semibold">La bande originale
+                                    mystère</span>
+                                <svg class="anecdotes__accordion-icon w-6 h-6 transition-transform peer-checked:rotate-180"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </label>
+                            <div
+                                class="anecdotes__accordion-content max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-screen">
+                                <div class="p-4">
+                                    <p class="text-noir-espace leading-relaxed">La trilogie Batman, Inception,
+                                        Dunkerque… Christopher Nolan et Hans Zimmer c’est une grande histoire d’amour.
+                                        Il était évident que le réalisateur allait faire appel au compositeur star
+                                        d’Hollywood pour un film de cette envergure. Mais cette fois-ci, Nolan aborde le
+                                        sujet différemment. Tellement désireux de garder le secret sur l’intrigue de son
+                                        blockbuster, il demande à Hans Zimmer d’en composer la musique sans rien lui
+                                        dévoiler de l’histoire.</p>
+                                    <p class="text-noir-espace leading-relaxed"> Le compositeur dévoilait à GQ :
+                                        “Quelques mois avant la
+                                        sortie du film, Chris m’a dit : « Hans, je vais t’écrire une page et tu
+                                        composeras la musique qui te vient à l’esprit à partir de cette unique page. Le
+                                        texte qu’il m’a donné n’était même pas centré sur le film. Ce qu’il m’a transmis
+                                        tournait plus autour de mon histoire que du plot de son film. Il sait comment je
+                                        fonctionne, c’est comme ça que l’on travaille ensemble.” Golden Globes, Oscars,
+                                        Bafta… En 2015, Hans Zimmer rafle les nominations les plus prestigieuses pour la
+                                        bande originale épique d’Interstellar.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion 4 -->
+                        <div class="anecdotes__accordion-item bg-blanc-stellaire rounded-lg shadow-lg overflow-hidden">
+                            <input type="checkbox" id="accordion4" class="anecdotes__accordion-input peer hidden">
+                            <label for="accordion4"
+                                class="anecdotes__accordion-trigger flex items-center justify-between p-4 bg-bleu-nuit text-blanc-stellaire cursor-pointer hover:bg-bleu-nuit/80 transition-colors">
+                                <span class="anecdotes__accordion-title text-lg font-semibold">Pas d’écran vert</span>
+                                <svg class="anecdotes__accordion-icon w-6 h-6 transition-transform peer-checked:rotate-180"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </label>
+                            <div
+                                class="anecdotes__accordion-content max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-screen">
+                                <div class="p-4">
+                                    <p class="text-noir-espace leading-relaxed">De Star Wars à Gravity, les films dont
+                                        l’action se situe principalement dans l’espace font partie des plus difficiles à
+                                        jouer. Entourés d’écrans verts gigantesques, les acteurs doivent imaginer qu’ils
+                                        sont à des années lumière de la Terre, en plein milieu de l’univers. Pour
+                                        Interstellar, Christopher Nolan voit les choses autrement.</p>
+                                    <p class="text-noir-espace leading-relaxed"> Le cinéaste avait
+                                        fait construire des plateaux de tournage avec décor et accessoires réalistes.
+                                        Mais ce qui a vraiment aidé les comédiens, ce sont les écrans donnant une vue
+                                        immédiate sur l’extérieur. Invité sur le plateau d’ABC News en 2014, Matthew
+                                        McConaughey expliquait que cela a rendu le tournage plus amusant : “Ce n’était
+                                        plus seulement un jeu d’acteur. Nous devions réagir à ce qu’il se passait dans
+                                        le décor et sur les écrans. C’est plus réaliste mais aussi plus facile et plus
+                                        fun pour les comédiens.”</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion 5 -->
+                        <div class="anecdotes__accordion-item bg-blanc-stellaire rounded-lg shadow-lg overflow-hidden">
+                            <input type="checkbox" id="accordion5" class="anecdotes__accordion-input peer hidden">
+                            <label for="accordion5"
+                                class="anecdotes__accordion-trigger flex items-center justify-between p-4 bg-bleu-nuit text-blanc-stellaire cursor-pointer hover:bg-bleu-nuit/80 transition-colors">
+                                <span class="anecdotes__accordion-title text-lg font-semibold">Des costumes
+                                    sur-mesure</span>
+                                <svg class="anecdotes__accordion-icon w-6 h-6 transition-transform peer-checked:rotate-180"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </label>
+                            <div
+                                class="anecdotes__accordion-content max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-screen">
+                                <div class="p-4">
+                                    <p class="text-noir-espace leading-relaxed">Christopher Nolan a donné seulement
+                                        douze semaines à Mary Zophres pour qu’elle crée les combinaisons d’astronautes
+                                        de Matthew McConaughey, Anne Hathaway et leurs cascadeurs. Si à l’écran, le
+                                        résultat semble fidèle à la réalité, ces tenues sont en fait pensées pour le
+                                        confort des acteurs. Climatisation intégrée dans le dos, système de transfert
+                                        d’oxygène, casques sur-mesure fabriqués avec une imprimante 3D… Le tout, muni de
+                                        micros intégrés afin que Christopher Nolan puisse communiquer avec les comédiens
+                                        même à distance et enfermés dans les décors grandeur nature.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- accordion-wrapper 2 -->
+                    <div
+                        class="anecdotes__accordion-wrapper anecdotes__accordion-wrapper--droite col-span-12  lg:col-span-6 h-auto p-3.5 flex flex-col gap-4">
+                        <!-- Accordions Composants Tailwind 5 fois-->
+                        <!-- Accordion 6 -->
+                        <div class="anecdotes__accordion-item bg-blanc-stellaire rounded-lg shadow-lg overflow-hidden">
+                            <input type="checkbox" id="accordion6" class="anecdotes__accordion-input peer hidden">
+                            <label for="accordion6"
+                                class="anecdotes__accordion-trigger flex items-center justify-between p-4 bg-bleu-nuit text-blanc-stellaire cursor-pointer hover:bg-bleu-nuit/80 transition-colors">
+                                <span class="anecdotes__accordion-title text-lg font-semibold">La magie des effets
+                                    spéciaux</span>
+                                <svg class="anecdotes__accordion-icon w-6 h-6 transition-transform peer-checked:rotate-180"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </label>
+                            <div
+                                class="anecdotes__accordion-content max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-screen">
+                                <div class="p-4">
+                                    <p class="text-noir-espace leading-relaxed">Grâce à un budget colossal de 165 000
+                                        000 dollars, Christopher Nolan a pu faire appel à une technologie de pointe en
+                                        ce qui concerne le tournage mais aussi les effets spéciaux réalisés par
+                                        ordinateur. En collaboration avec l’astrophysicien Kip Thorne, le directeur des
+                                        effets visuels Paul Franklin a pu générer des algorithmes lui permettant de
+                                        créer des images plus vraies que nature.</p>
+                                    <p class="text-noir-espace leading-relaxed"> D’ailleurs, impressionné par le rendu
+                                        visuel d’Interstellar, Kip Thorne a par la suite publié plusieurs articles sur
+                                        le sujet, affirmant que le film - bien que fictif - avait fait avancer
+                                        scientifiquement la vision que nous avions des trous de ver. Les hautes sphères
+                                        du septième art n’ont d’ailleurs pas manqué de remarquer ce réalisme : les
+                                        effets visuels ont ont été récompensés aux Oscars ainsi qu’aux BAFTA en 2015.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion 7 -->
+                        <div class="anecdotes__accordion-item bg-blanc-stellaire rounded-lg shadow-lg overflow-hidden">
+                            <input type="checkbox" id="accordion7" class="anecdotes__accordion-input peer hidden">
+                            <label for="accordion7"
+                                class="anecdotes__accordion-trigger flex items-center justify-between p-4 bg-bleu-nuit text-blanc-stellaire cursor-pointer hover:bg-bleu-nuit/80 transition-colors">
+                                <span class="anecdotes__accordion-title text-lg font-semibold">Planète poussière</span>
+                                <svg class="anecdotes__accordion-icon w-6 h-6 transition-transform peer-checked:rotate-180"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </label>
+                            <div
+                                class="anecdotes__accordion-content max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-screen">
+                                <div class="p-4">
+                                    <p class="text-noir-espace leading-relaxed">Située dans un futur proche et
+                                        dystopique, l’intrigue d’Interstellar plonge le spectateur sur une Terre où
+                                        l’air est devenu presque irrespirable. Pour créer l’atmosphère poussiéreuse du
+                                        début du film, Christopher Nolan s’est inspiré d’un évènement qui a secoué les
+                                        Etats-Unis en 1930 : le Dust Bowl.</p>
+                                    <p class="text-noir-espace leading-relaxed"> Sécheresse et série de tempêtes de
+                                        poussières
+                                        ont provoqué une catastrophe écologique et agricole sans précédent en Oklahoma,
+                                        au Texas et au Kansas. Pour plus de réalisme, l’équipe technique d’Interstellar
+                                        a planté elle-même un champs de maïs de 500 hectares dans la région d’Alberta au
+                                        Canada, puis l’a enflammé pour recréer cette atmosphère apocalyptique.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion 8-->
+                        <div class="anecdotes__accordion-item bg-blanc-stellaire rounded-lg shadow-lg overflow-hidden">
+                            <input type="checkbox" id="accordion8" class="anecdotes__accordion-input peer hidden">
+                            <label for="accordion8"
+                                class="anecdotes__accordion-trigger flex items-center justify-between p-4 bg-bleu-nuit text-blanc-stellaire cursor-pointer hover:bg-bleu-nuit/80 transition-colors">
+                                <span class="anecdotes__accordion-title text-lg font-semibold">Hypothermie sur la
+                                    planète glacée</span>
+                                <svg class="anecdotes__accordion-icon w-6 h-6 transition-transform peer-checked:rotate-180"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </label>
+                            <div
+                                class="anecdotes__accordion-content max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-screen">
+                                <div class="p-4">
+                                    <p class="text-noir-espace leading-relaxed">Anne Hathaway a été victime
+                                        d'hypothermie durant les prises de vue sur la planète glacée recouverte d'eau
+                                        aperçue dans les bandes-annonces. L'actrice a dû vite se ressaisir. "Les
+                                        chochottes ne font pas long feu sur les tournages de Nolan", a-t-elle confié.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion 9 -->
+                        <div class="anecdotes__accordion-item bg-blanc-stellaire rounded-lg shadow-lg overflow-hidden">
+                            <input type="checkbox" id="accordion9" class="anecdotes__accordion-input peer hidden">
+                            <label for="accordion9"
+                                class="anecdotes__accordion-trigger flex items-center justify-between p-4 bg-bleu-nuit text-blanc-stellaire cursor-pointer hover:bg-bleu-nuit/80 transition-colors">
+                                <span class="anecdotes__accordion-title text-lg font-semibold">Kubrick et "L'Odyssée de
+                                    l'espace"</span>
+                                <svg class="anecdotes__accordion-icon w-6 h-6 transition-transform peer-checked:rotate-180"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </label>
+                            <div
+                                class="anecdotes__accordion-content max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-screen">
+                                <div class="p-4">
+                                    <p class="text-noir-espace leading-relaxed">Christopher Nolan s'est inspiré de 2001
+                                        : L'Odyssée de l'espace pour Interstellar mais aussi du travail de l'architecte
+                                        Mies van der Rohe, qui a imaginé le vaisseau spatial de L'Odyssée.</p>
+
+                                    <p class="text-noir-espace leading-relaxed">Le réalisateur a également appliquée une
+                                        leçon de Stanley Kubrick, celle de
+                                        privilégier "une seule puissante image". Christopher Nolan a ainsi chercher à
+                                        faire des plans plus longs.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion 10 -->
+                        <div class="anecdotes__accordion-item bg-blanc-stellaire rounded-lg shadow-lg overflow-hidden">
+                            <input type="checkbox" id="accordion10" class="anecdotes__accordion-input peer hidden">
+                            <label for="accordion10"
+                                class="anecdotes__accordion-trigger flex items-center justify-between p-4 bg-bleu-nuit text-blanc-stellaire cursor-pointer hover:bg-bleu-nuit/80 transition-colors">
+                                <span class="anecdotes__accordion-title text-lg font-semibold">Nolan a essayé de
+                                    raccourcir le film de 2h45</span>
+                                <svg class="anecdotes__accordion-icon w-6 h-6 transition-transform peer-checked:rotate-180"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </label>
+                            <div
+                                class="anecdotes__accordion-content max-h-0 overflow-hidden transition-all duration-300 peer-checked:max-h-screen">
+                                <div class="p-4">
+                                    <p class="text-noir-espace leading-relaxed">Le cinéaste aurait voulu raccourcir le
+                                        long-métrage de 45 minutes pour le ramener à une durée de 2 heures. Mais il
+                                        n'est pas parvenu à trouver les bonnes coupes. Le raccourcir "sabotait le ton du
+                                        film", a indiqué Nolan au magazine Entertainment Weekly. </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
 
 
     </main>

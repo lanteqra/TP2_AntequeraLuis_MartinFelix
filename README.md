@@ -35,7 +35,7 @@ Dans le cadre du cours Techniques d'intégration des interfaces Web 2, ce travai
 - Composants Tailwind :
   - Barre de navigation : "Simple Responsive Navigation Bar" - https://www.creative-tim.com/twcomponents/component/simple-responsive-navigation-bar
   - Carrousel : "Carousel with indicator buttons" - https://daisyui.com/components/carousel/#carousel-with-indicator-buttons
-  - Accordéon :
+  - Accordéon : "Accordion" - https://tailwindflex.com/@abhirajk/accordion-2
 - Javascript (animations)
   - Animation Js :
     - Carousel personnalisé avec auto-slide et dots de navigation - js/carousel.js
@@ -58,6 +58,8 @@ visuelle du projet (palette de couleurs, typographies et thème Interstellar).
 | Luis         | index : Section distribution avec animation Js                                                               |
 | Luis         | index : Section images-extraits avec animation CSS                                                           |
 | Félix        | tournage : Section fait-divers avec animation CSS                                                            |
+| Félix        | tournage : Section tournage et bloopers avec animation Js                                                    |
+| Félix        | tournage : Section anecdotes                                                                                 |
 | ------------ | ----------------                                                                                             |
 
 ## Validation W3C :
