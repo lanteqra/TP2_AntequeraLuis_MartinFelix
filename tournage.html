@@ -61,7 +61,13 @@
         .focus-visible {
             @apply focus-visible:outline-2 focus-visible:outline-orange-horizon focus-visible:outline-offset-2;
         }
-
+        .anecdotes__accordion-item {
+            @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+        }
+ 
+        .anecdotes__accordion-trigger {
+            @apply transition-all duration-300 hover:bg-bleu-nuit/80 hover:pl-6
+        }
     </style>
 
 </head>
@@ -221,7 +227,7 @@
                     </div>
                     <!-- accordions-wrapper 1 -->
                     <div
-                        class="anecdotes__accordion-wrapper col-span-12  lg:col-span-6 h-auto p-3.5 flex flex-col gap-4">
+                        class="anecdotes__accordion-wrapper anecdotes__accordion-wrapper--gauche col-span-12  lg:col-span-6 h-auto p-3.5 flex flex-col gap-4">
                         <!-- accordions Composants Tailwind 5 fois-->
                         <!-- Accordion 1 -->
                         <div class="anecdotes__accordion-item bg-blanc-stellaire rounded-lg shadow-lg overflow-hidden">
@@ -395,7 +401,7 @@
 
                     <!-- accordion-wrapper 2 -->
                     <div
-                        class="anecdotes__accordion-wrapper col-span-12  lg:col-span-6 h-auto p-3.5 flex flex-col gap-4">
+                        class="anecdotes__accordion-wrapper anecdotes__accordion-wrapper--droite col-span-12  lg:col-span-6 h-auto p-3.5 flex flex-col gap-4">
                         <!-- Accordions Composants Tailwind 5 fois-->
                         <!-- Accordion 6 -->
                         <div class="anecdotes__accordion-item bg-blanc-stellaire rounded-lg shadow-lg overflow-hidden">
