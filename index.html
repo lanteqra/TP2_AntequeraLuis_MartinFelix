@@ -93,7 +93,22 @@
         .distribution__card-socials__link, .footer__social-link {
             @apply focus-visible:outline-2 focus-visible:outline-orange-horizon focus-visible:outline-offset-2;
         }
-        
+
+        .raisons__card-content {
+            @apply h-auto bg-bleu-nuit p-5 m-5 rounded-lg shadow-xl shadow-noir-espace/60;
+        }
+        .raisons__card-media {
+            @apply w-full h-full flex justify-center p-7;
+        }
+        .raisons__card-img {
+            @apply w-auto h-full object-cover rounded-lg shadow-xl shadow-noir-espace/60;
+        }
+        .raisons__card-heading {
+            @apply text-2xl pb-3 font-extrabold text-beige-terre;
+        }
+        .raisons__card-text {
+            @apply transition-all duration-300 overflow-hidden text-[1rem];
+        } 
     </style>
 
 </head>
@@ -665,15 +680,13 @@
                         </p>
                     </div>
                     <!-- Carte - Récompenses -->
-                    <div class="raisons__card-grid col-span-12 grid grid-cols-12 gap-5 bg-amber-300 h-full">
-                        <div
-                            class="raisons__card-media col-span-12 order-2 sm:col-span-6 sm:order-1 h-full bg-blue-500">
+                    <div class="raisons__card-grid col-span-12 grid grid-cols-12 bg-beige-terre rounded-2xl">
+                        <div class="raisons__card-media col-span-12 order-2 sm:col-span-4 sm:order-1">
                             <img class="raisons__card-img" src="media/raisons/raison-1.jpg" alt="">
                         </div>
-                        <div
-                            class="raisons__card-content col-span-12 order-1 sm:col-span-6 sm:order-2 h-auto bg-red-500">
-                            <h4 class="raisons__card-heading">Récompenses</h4>
-                            <div class="raisons__card-text line-clamp-3 transition-all duration-300 overflow-hidden">
+                        <div class="raisons__card-content col-span-12 order-1 sm:col-span-8 sm:order-2 ">
+                            <h4 class="raisons__card-heading ">Récompenses</h4>
+                            <div class="raisons__card-text line-clamp-3 ">
                                 <p>Interstellar a connu un succès notable lors de la saison des récompenses 2014-2015,
                                     remportant plusieurs prix prestigieux malgré une présence plus discrète dans les
                                     catégories majeures (Meilleur film, Meilleur réalisateur).</p>
@@ -698,7 +711,7 @@
                                     restées au stade de la nomination, sans victoire.</p>
                             </div>
 
-                            <button class="raisons__card-toggle mt-2 text-sm font-semibold underline focus-visible"
+                            <button class="raisons__card-toggle mt-2 text-sm font-semibold underline focus-visible text-beige-terre hover:text-orange-horizon hover:font-bold pt-5"
                                 aria-expanded="false">
                                 Voir plus
                             </button>
@@ -706,32 +719,29 @@
                     </div>
 
                     <!-- Carte - Commentaire d'un fan-->
-                    <div class="raisons__card-grid col-span-12 grid grid-cols-12 gap-5 bg-amber-300 h-full">
-                        <div
-                            class="raisons__card-media col-span-12 order-2 sm:col-span-6 sm:order-2 h-full bg-blue-500">
+                    <div class="raisons__card-grid col-span-12 grid grid-cols-12 bg-beige-terre rounded-2xl">
+                        <div class="raisons__card-media col-span-12 order-2 sm:col-span-4 sm:order-2 ">
                             <img class="raisons__card-img" src="media/raisons/raison-2.png" alt="">
                         </div>
-                        <div
-                            class="raisons__card-content col-span-12 order-1 sm:col-span-6 sm:order-1 h-auto bg-red-500">
+                        <div class="raisons__card-content col-span-12 order-1 sm:col-span-8 sm:order-1">
                             <h3 class="raisons__card-heading">Commentaire en vedette</h3>
-                            <h4 class="raisons__card-subheading">On est en 2025 et je suis encore en larmes après avoir
-                                revu ce
-                                chef-d'œuvre</h4>
-                            <div class="raisons__card-text line-clamp-3 transition-all duration-300 overflow-hidden">
-                                <p>Je considère le cinéma comme une forme d'art capable d'évoquer des émotions chez
-                                    nous,
-                                    les êtres humains. Interstellar fait partie de ces rares œuvres qui font naître des
-                                    sentiments profonds et inexplicables sur ce que signifie être vivant — conscients de
-                                    notre existence éphémère, mais capables d'imaginer au-delà du temps, jusqu'à
-                                    l'infini.
-                                    Son exploration de l'amour, du sacrifice et de l'inconnu est profondément humaine et
+                            <h4 class="raisons__card-subheading text-md font-semibold text-beige-terre pb-4 ">«On est en 2026 et je suis encore en larmes après avoir
+                                revu ce chef-d'œuvre » - @septieme_art_fan </h4>
+                            <div class="raisons__card-text line-clamp-3 ">
+                                <p>Je considère le cinéma comme une forme d'art capable d'évoquer des émotions
+                                    chez-nous, les êtres humains. Interstellar fait partie de ces rares œuvres qui font
+                                    naître des sentiments profonds et inexplicables sur ce que signifie être vivant,
+                                    conscients de notre existence éphémère, mais capables d'imaginer au-delà du temps,
+                                    jusqu'à l'infini. </p>
+                                    <p>Son exploration de l'amour, du sacrifice et de l'inconnu est profondément humaine et
                                     nous relie à quelque chose de plus grand. Les images sont à couper le souffle, la
                                     bande sonore est d'une beauté envoûtante, et l'histoire résonne autant sur le plan
-                                    émotionnel que philosophique. Ce film m'a fait pleurer, non pas seulement à cause de
+                                    émotionnel que philosophique. </p>
+                                    <p>Ce film m'a fait pleurer, non pas seulement à cause de
                                     sa tristesse, mais à cause de sa beauté pure et bouleversante.</p>
                             </div>
 
-                            <button class="raisons__card-toggle mt-2 text-sm font-semibold underline focus-visible"
+                            <button class="raisons__card-toggle mt-2 text-sm font-semibold underline focus-visible text-beige-terre hover:text-orange-horizon hover:font-bold  pt-5"
                                 aria-expanded="false">
                                 Voir plus
                             </button>
@@ -739,17 +749,18 @@
                     </div>
 
                     <!-- Carte - Critique -->
-                    <div class="raisons__card-grid col-span-12 grid grid-cols-12 gap-5 bg-amber-300 h-full">
+                    <div class="raisons__card-grid col-span-12 grid grid-cols-12 bg-beige-terre rounded-2xl">
                         <div
-                            class="raisons__card-media col-span-12 order-2 sm:col-span-6 sm:order-1 h-full bg-blue-500">
+                            class="raisons__card-media col-span-12 order-2 sm:col-span-4 sm:order-1">
                             <img class="raisons__card-img" src="media/raisons/raison-3.png" alt="">
                         </div>
                         <div
-                            class="raisons__card-content col-span-12 order-1 sm:col-span-6 sm:order-2 h-auto bg-red-500">
-                            <h3 class="raisons__card-heading">Critique</h3>
-                            <h4 class="raisons__card-subheading">C'est l'hommage assumé de Nolan à « 2001 : l'Odyssée de
-                                l'espace »</h4>
-                            <div class="raisons__card-text line-clamp-3 transition-all duration-300 overflow-hidden">
+                            class="raisons__card-content col-span-12 order-1 sm:col-span-8 sm:order-2">
+                            <h3 class="raisons__card-heading">Critique
+                            </h3>
+                            <h4 class="raisons__card-subheading text-md font-semibold text-beige-terre pb-4 ">C'est l'hommage assumé de Nolan à « 2001 : l'Odyssée de
+                                l'espace » - Sophie Dubois du Cahiers du Cinéma</h4>
+                            <div class="raisons__card-text line-clamp-3">
                                 <p>Trous noirs, relativité, singularité, cinquième dimension ! Les discours sont
                                     grandioses. Il y a cependant un problème. Livré sur un ton familier et précipité,
                                     une
@@ -760,7 +771,7 @@
                                     comme une coulée de lave. Les acteurs semblent dépassés par la production.</p>
                             </div>
 
-                            <button class="raisons__card-toggle mt-2 text-sm font-semibold underline focus-visible"
+                            <button class="raisons__card-toggle mt-2 text-sm font-semibold underline focus-visible text-beige-terre hover:text-orange-horizon hover:font-bold  pt-5"
                                 aria-expanded="false">
                                 Voir plus
                             </button>
