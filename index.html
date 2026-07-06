@@ -109,6 +109,10 @@
         .raisons__card-text {
             @apply transition-all duration-300 overflow-hidden text-[1rem];
         } 
+        .raisons__card-grid  {
+            @apply  transition-transform duration-300 hover:-translate-y-2 shadow-xl shadow-blanc-stellaire/40 hover:scale-105;
+        } 
+
     </style>
 
 </head>
@@ -118,7 +122,7 @@
     <a href="#content" class="sr-only">Aller au contenu principal</a>
     <header>
         <!-- navbar -->
-        <div class="navbar__container grid grid-cols-12 gap-1 text-center">
+        <div class="navbar__container grid grid-cols-12 gap-1 text-center border-b-4 border-beige-terre">
 
             <!-- component -->
             <nav class="navbar col-span-12 flex items-center bg-bleu-nuit p-3 flex-wrap">
@@ -155,9 +159,9 @@
     <main id="content">
         <!-- hero -->
         <section
-            class="hero bg-[url(media/hero.jpg)] bg-cover bg-center bg-no-repeat min-h-[50vw] md:min-h-[40vw] lg:min-h-[700px] flex items-center">
+            class="hero bg-[url(media/hero.jpg)] bg-cover bg-center bg-no-repeat min-h-[50vw] md:min-h-[40vw] lg:min-h-[700px] flex items-center border-b-4 border-beige-terre">
             <div class="hero__container container mx-auto px-4">
-                <div class="grid grid-cols-12 gap-2 h-full items-center">
+                <div class="grid grid-cols-12 gap-2 h-full items-center ">
                     <!-- R -->
                     <div class="hero__content col-span-12  flex flex-col justify-center md:col-span-5 m-7 gap-6">
                         <h1
@@ -240,7 +244,7 @@
         <!-- images-extraits -->
         <section id="images-extraits" class="images-extraits bg-noir-espace text-blanc-stellaire"
             aria-label="des images et extraits du film">
-            <div class="images-extraits__container container mx-auto px-4 h-full">
+            <div class="images-extraits__container container mx-auto px-4 h-full border-b-4 border-beige-terre">
                 <div class="images-extraits__grid grid grid-cols-12 gap-5 h-full  items-center pt-7 pb-7">
                     <!-- Section header -->
                     <div class="images-extraits__header h-auto col-span-12 pb-6 pt-6">
@@ -339,7 +343,7 @@
         <!-- cast - distribution -->
         <section id="distribution" class="distribution bg-noir-espace text-blanc-stellaire"
             aria-label="Présentation des acteurs et de l'équipe">
-            <div class="distribution__container container mx-auto px-4 h-full">
+            <div class="distribution__container container mx-auto px-4 h-full border-b-4 border-beige-terre">
                 <div class="distribution__grid grid grid-cols-12 gap-5 h-full  items-stretch pt-7 pb-7">
                     <!-- Section header -->
                     <div class="distribution__header col-span-12 h-auto pb-6 pt-6">
@@ -680,7 +684,7 @@
                         </p>
                     </div>
                     <!-- Carte - Récompenses -->
-                    <div class="raisons__card-grid col-span-12 grid grid-cols-12 bg-beige-terre rounded-2xl">
+                    <div class="raisons__card-grid col-span-12 grid grid-cols-12 bg-beige-terre rounded-2xl m-7">
                         <div class="raisons__card-media col-span-12 order-2 md:col-span-4 md:order-1">
                             <img class="raisons__card-img" src="media/raisons/raison-1.jpg" alt="">
                         </div>
@@ -719,7 +723,7 @@
                     </div>
 
                     <!-- Carte - Commentaire d'un fan-->
-                    <div class="raisons__card-grid col-span-12 grid grid-cols-12 bg-beige-terre rounded-2xl">
+                    <div class="raisons__card-grid col-span-12 grid grid-cols-12 bg-beige-terre rounded-2xl m-7">
                         <div class="raisons__card-media col-span-12 order-2 md:col-span-4 md:order-2 ">
                             <img class="raisons__card-img" src="media/raisons/raison-2.png" alt="">
                         </div>
@@ -749,7 +753,7 @@
                     </div>
 
                     <!-- Carte - Critique -->
-                    <div class="raisons__card-grid col-span-12 grid grid-cols-12 bg-beige-terre rounded-2xl">
+                    <div class="raisons__card-grid col-span-12 grid grid-cols-12 bg-beige-terre rounded-2xl m-7">
                         <div
                             class="raisons__card-media col-span-12 order-2 md:col-span-4 md:order-1">
                             <img class="raisons__card-img" src="media/raisons/raison-3.png" alt="">
@@ -783,18 +787,18 @@
             </div>
         </section>
     </main>
-    <footer class="footer bg-bleu-nuit text-blanc-stellaire font-corps">
+    <footer class="footer bg-bleu-nuit text-blanc-stellaire font-corps border-t-4 border-beige-terre">
         <div class="footer__container container mx-auto px-4 py-8">
             <div class="footer__grid grid grid-cols-12 gap-4 items-center">
 
                 <!-- top left -->
                 <div
                     class="footer__top-left col-span-12 sm:col-span-6 flex flex-row items-center gap-2 justify-center sm:justify-start">
-                    <address class="footer__address flex flex-col md:flex-row gap-4 text-center sm:text-left">
+                    <address class="footer__address flex flex-col md:flex-row gap-4 text-center sm:text-left focus-visible">
                         <a href="tel:873-123-4567" class="footer__link flex items-center">
                             <box-icon name='phone' type='solid' color='currentColor' size='md'></box-icon> 873-123-4567
                         </a>
-                        <a href="mailto:info@Interstellar.com" class="footer__link flex items-center">
+                        <a href="mailto:info@Interstellar.com" class="footer__link flex items-center focus-visible">
                             <box-icon name='envelope' type='solid' color='currentColor' size='md'></box-icon>
                             info@Interstellar.com
                         </a>
