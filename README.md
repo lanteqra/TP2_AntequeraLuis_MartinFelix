@@ -56,6 +56,7 @@ visuelle du projet (palette de couleurs, typographies et thème Interstellar).
 | Luis       | index : Section hero - carrousel avec animation js |
 | Luis       | index : Section distribution avec animation Js|
 | Luis       | index : Section images-extraits avec animation CSS|
+| Luis       | index : Section raisons avec hover|
 |------------|----------------|
 
 
