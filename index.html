@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez Interstellar, un film de science-fiction sur un voyage à travers l'espace-temps pour sauver l'humanité. Bande-annonce, distribution et extraits du film.">
     <title>Accueil | Interstellar</title>
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -24,11 +25,11 @@
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"
-        integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous" />
+        integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY=" crossorigin="anonymous">
 
     <link
         href="https://cdn.jsdelivr.net/combine/npm/daisyui@5/base/rootscrolllock.css,npm/daisyui@5/base/properties.css,npm/daisyui@5/base/scrollbar.css,npm/daisyui@5/base/rootscrollgutter.css,npm/daisyui@5/base/svg.css,npm/daisyui@5/base/rootcolor.css,npm/daisyui@5/base/reset.css,npm/daisyui@5/components/carousel.css,npm/daisyui@5/theme/light.css"
-        rel="stylesheet" type="text/css" />
+        rel="stylesheet" type="text/css">
     <script src="js/carousel.js" defer></script>
     <script src="js/validation.js" defer></script>
     <script src="js/castCards.js" defer></script>
@@ -126,8 +127,8 @@
 
             <!-- component -->
             <nav class="navbar col-span-12 flex items-center bg-bleu-nuit p-3 flex-wrap">
-                <a href="index.html" class="navbar__brand p-2 mr-4 inline-flex items-center focus-visible">
-                    <img src="media/logo.jpg" alt="logo" aria-hidden="true"
+                <a href="index.html" class="navbar__brand p-2 mr-4 inline-flex items-center focus-visible" aria-label="Retour à l'accueil - Interstellar">
+                    <img src="media/logo.jpg" alt="logo du site web du film Interstellar" aria-hidden="true"
                         class="navbar__logo w-24 h-24 rounded-full p-4">
                     <span
                         class="navbar__title font-titre text-3xl text-blanc-stellaire font-bold uppercase tracking-wide hover:text-orange-horizon">Interstellar</span>
@@ -161,7 +162,7 @@
         <section
             class="hero bg-[url(media/hero.jpg)] bg-cover bg-center bg-no-repeat min-h-[50vw] md:min-h-[40vw] lg:min-h-[700px] flex items-center border-b-4 border-beige-terre">
             <div class="hero__container container mx-auto px-4">
-                <div class="grid grid-cols-12 gap-2 h-full items-center ">
+                <div class="grid grid-cols-12 gap-2 h-full items-center text-center md:text-left">
                     <!-- R -->
                     <div class="hero__content col-span-12  flex flex-col justify-center md:col-span-5 m-7 gap-6">
                         <h1
@@ -247,7 +248,7 @@
             <div class="images-extraits__container container mx-auto px-4 h-full border-b-4 border-beige-terre">
                 <div class="images-extraits__grid grid grid-cols-12 gap-5 h-full  items-center pt-7 pb-7">
                     <!-- Section header -->
-                    <div class="images-extraits__header h-auto col-span-12 pb-6 pt-6">
+                    <div class="images-extraits__header h-auto col-span-12 pb-6 pt-6 text-center">
                         <h2
                             class="images-extraits__title font-titre text-beige-terre text-2xl pb-4 font-bold uppercase tracking-wide">
                             Images et extraits
@@ -272,65 +273,68 @@
 
                     </div>
                     <!-- img 1 -->
-                    <div class="h-[300px] col-span-12 md:col-span-6 xl:col-span-4">
-                        <figure class="images-extraits__figure images-extraits__figure--delay-1 h-full" role="figure"
+                    <div class="h-[300px] col-start-2 col-span-10 md:col-span-6 xl:col-span-4">
+                        <figure class="images-extraits__figure images-extraits__figure--delay-1 h-full"
                             aria-label="Scène du film Interstellar">
                             <div
                                 class="images-extraits__img-wrapper overflow-hidden h-[250px] rounded-lg mb-4 shadow-xl shadow-blanc-stellaire/20">
                                 <img class="images-extraits__img w-full h-full object-cover"
                                     src="media/extraits/extrait-1.jpg"
-                                    alt="Le vaisseau spatial s'approche du trou noir supermassif Gargantua, montrant le contraste dramatique entre le vaisseau sombre et l'intense luminosité de l'anomalie cosmique">
+                                    alt="Vaisseau spatial s'approchant du trou noir Gargantua">
                             </div>
                             <figcaption class="images-extraits__caption text-center p-3">
                                 <p class="images-extraits__caption-text">Scène du film <a
                                         class="images-extraits__caption-link text-beige-terre hover:font-bold hover:text-orange-horizon focus-visible underline"
-                                        href="https://www.imdb.com/title/tt0816692/">Interstellar</a></p>
+                                        href="https://www.imdb.com/fr-ca/title/tt0816692/mediaviewer/rm1192534018/?ref_=ttmi_mi_92_2" 
+                                        aria-label="Interstellar sur IMDb - scène du vaisseau près du trou noir">Interstellar</a></p>
                             </figcaption>
                         </figure>
                     </div>
                     <!-- img 2 -->
-                    <div class="h-[300px] col-span-12 md:col-span-6 xl:col-span-4">
-                        <figure class="images-extraits__figure images-extraits__figure--delay-2 h-full" role="figure"
+                    <div class="h-[300px] col-start-2 col-span-10 md:col-span-6 xl:col-span-4">
+                        <figure class="images-extraits__figure images-extraits__figure--delay-2 h-full" 
                             aria-label="Scène du film Interstellar">
                             <div
                                 class="images-extraits__img-wrapper overflow-hidden h-[250px] rounded-lg mb-4 shadow-xl shadow-blanc-stellaire/20">
                                 <img class="images-extraits__img w-full h-full object-cover"
                                     src="media/extraits/extrait-2.jpg"
-                                    alt="Scène du film Interstellar où deux astronautes marchent sur un océan sous un ciel nuageux accompagnés d'un robot">
+                                    alt="Astronautes et robot marchant sur un océan">
                             </div>
                             <figcaption class="images-extraits__caption text-center p-3">
                                 <p class="images-extraits__caption-text">Scène du film <a
                                         class="images-extraits__caption-link text-beige-terre hover:font-bold hover:text-orange-horizon focus-visible underline"
-                                        href="https://www.imdb.com/title/tt0816692/">Interstellar</a></p>
+                                        href="https://www.imdb.com/fr-ca/title/tt0816692/mediaviewer/rm28261376/?ref_=ttmi_mi_225_2"
+                                        aria-label="Interstellar sur IMDb - scène des astronautes sur l'océan">Interstellar</a></p>
                             </figcaption>
                         </figure>
                     </div>
                     <!-- img 3 -->
-                    <div class="h-[300px] col-span-12 md:col-span-6 xl:col-span-4">
-                        <figure class="images-extraits__figure images-extraits__figure--delay-3 h-full" role="figure"
+                    <div class="h-[300px] col-start-2 col-span-10 md:col-span-6 xl:col-span-4">
+                        <figure class="images-extraits__figure images-extraits__figure--delay-3 h-full"
                             aria-label="Scène du film Interstellar">
                             <div
                                 class="images-extraits__img-wrapper overflow-hidden h-[250px] rounded-lg mb-4 shadow-xl shadow-blanc-stellaire/20">
                                 <img class="images-extraits__img w-full h-full object-cover"
                                     src="media/extraits/extrait-3.jpg"
-                                    alt="Le personnage Cooper, interprété par Matthew McConaughey, pilotant un vaisseau spatial dans le film Interstellar, vu de l'intérieur de la cabine">
+                                    alt="Cooper pilotant le vaisseau depuis la cabine">
                             </div>
                             <figcaption class="images-extraits__caption text-center p-3">
                                 <p class="images-extraits__caption-text">Scène du film <a
                                         class="images-extraits__caption-link text-beige-terre hover:font-bold hover:text-orange-horizon focus-visible underline"
-                                        href="https://www.imdb.com/title/tt0816692/">Interstellar</a></p>
+                                        href="https://www.imdb.com/fr-ca/title/tt0816692/mediaindex/?ref_=mv_close"
+                                        aria-label="Interstellar sur IMDb - scène de Cooper dans la cabine">Interstellar</a></p>
                             </figcaption>
                         </figure>
                     </div>
                     <!-- vid -->
                     <div
-                        class="images-extraits__video-wrapper images-extraits__video-wrapper--delay h-auto col-span-12 md:col-span-6 xl:col-start-3 xl:col-span-8">
+                        class="images-extraits__video-wrapper images-extraits__video-wrapper--delay h-auto hidden md:block md:col-span-6 xl:col-start-3 xl:col-span-8">
                         <div
                             class="images-extraits__video-embed relative pb-[56.25%] h-0 overflow-hidden md:pb-0 md:h-[300px] lg:pb-[56.25%] lg:h-0 rounded-lg mb-4 shadow-xl shadow-blanc-stellaire/20">
-                            <iframe class="absolute top-0 left-0 w-full h-full"
+                            <iframe class="absolute top-0 left-0 w-full h-full border-0"
                                 aria-label="Bande-annonce du film Interstellar"
                                 src="https://www.youtube.com/embed/Rt2LHkSwdPQ?si=uaNE9ZEa56b6SaXD"
-                                title="YouTube video player" frameborder="0"
+                                title="YouTube video player"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
@@ -366,7 +370,7 @@
                                     spatiale en quête d'une nouvelle planète habitable.
                                 </p>
                             </div>
-                            <ul class="distribution__card-socials" role="list">
+                            <ul class="distribution__card-socials">
                                 <li class="distribution__card-socials__item">
                                     <a class="distribution__card-socials__link"
                                         href="https://www.facebook.com/MatthewMcConaughey/"
@@ -388,8 +392,7 @@
                                         href="https://www.instagram.com/officiallymcconaughey/"
                                         aria-label="Instagram de Mathew MaConaughey" target="_blank"
                                         rel="noopener noreferrer">
-                                        <box-icon name='instagram-alt' type='logo' color='currentColor'
-                                            size='md'></box-icon>
+                                        <box-icon type='logo' name='instagram-alt' color='currentColor' size='md'></box-icon>
                                     </a>
                                 </li>
                             </ul>
@@ -408,7 +411,7 @@
                                     l'humanité depuis la Terre.
                                 </p>
                             </div>
-                            <ul class="distribution__card-socials" role="list">
+                            <ul class="distribution__card-socials">
                                 <li class="distribution__card-socials__item">
                                     <a class="distribution__card-socials__link"
                                         href="https://www.facebook.com/jessicachastainofficial"
@@ -430,8 +433,7 @@
                                         href="https://www.instagram.com/jessicachastain"
                                         aria-label="Instagram de Jessica Chastain" target="_blank"
                                         rel="noopener noreferrer">
-                                        <box-icon name='instagram-alt' type='logo' color='currentColor'
-                                            size='md'></box-icon>
+                                        <box-icon type='logo' name='instagram-alt' color='currentColor' size='md'></box-icon>
                                     </a>
                                 </li>
                             </ul>
@@ -449,7 +451,7 @@
                                     Astronaute et scientifique, fille du Professeur Brand, membre clé de l'équipage.
                                 </p>
                             </div>
-                            <ul class="distribution__card-socials" role="list">
+                            <ul class="distribution__card-socials">
                                 <li class="distribution__card-socials__item">
                                     <a class="distribution__card-socials__link" href="https://www.facebook.com/Hathaway
                                     " aria-label="Facebook de Anne Hathaway" target="_blank" rel="noopener noreferrer">
@@ -468,8 +470,7 @@
                                         href="https://www.instagram.com/annehathaway"
                                         aria-label="Instagram de Anne Hathaway" target="_blank"
                                         rel="noopener noreferrer">
-                                        <box-icon name='instagram-alt' type='logo' color='currentColor'
-                                            size='md'></box-icon>
+                                        <box-icon type='logo' name='instagram-alt' color='currentColor' size='md'></box-icon>
                                     </a>
                                 </li>
                             </ul>
@@ -486,7 +487,7 @@
                                     version jeune de Murph, curieuse et proche de son père avant son départ.
                                 </p>
                             </div>
-                            <ul class="distribution__card-socials" role="list">
+                            <ul class="distribution__card-socials">
                                 <li class="distribution__card-socials__item">
                                     <a class="distribution__card-socials__link"
                                         href="https://www.facebook.com/groups/1603296753287469/"
@@ -507,8 +508,7 @@
                                         href="https://www.instagram.com/mackenziefoy"
                                         aria-label="Instagram de Mackenzie Foy" target="_blank"
                                         rel="noopener noreferrer">
-                                        <box-icon name='instagram-alt' type='logo' color='currentColor'
-                                            size='md'></box-icon>
+                                        <box-icon type='logo' name='instagram-alt' color='currentColor' size='md'></box-icon>
                                     </a>
                                 </li>
                             </ul>
@@ -525,7 +525,7 @@
                                     Physicien génial de la NASA et mentor de Cooper, architecte secret de la mission.
                                 </p>
                             </div>
-                            <ul class="distribution__card-socials" role="list">
+                            <ul class="distribution__card-socials">
                                 <li class="distribution__card-socials__item">
                                     <a class="distribution__card-socials__link"
                                         href="https://www.facebook.com/michaelcaineofficial/"
@@ -546,8 +546,7 @@
                                         href="https://www.instagram.com/popular/micheal-caine/"
                                         aria-label="Instagram de Michael Caine" target="_blank"
                                         rel="noopener noreferrer">
-                                        <box-icon name='instagram-alt' type='logo' color='currentColor'
-                                            size='md'></box-icon>
+                                        <box-icon type='logo' name='instagram-alt' color='currentColor' size='md'></box-icon>
                                     </a>
                                 </li>
                             </ul>
@@ -565,7 +564,7 @@
                                     Robot de combat reconverti en assistant de l'équipage, loyal et sarcastique.
                                 </p>
                             </div>
-                            <ul class="distribution__card-socials" role="list">
+                            <ul class="distribution__card-socials">
                                 <li class="distribution__card-socials__item">
                                     <a class="distribution__card-socials__link"
                                         href="https://www.facebook.com/search/top/?q=Bill%20Irwin"
@@ -579,8 +578,7 @@
                                     <a class="distribution__card-socials__link"
                                         href="https://www.instagram.com/popular/actor-bill-irwin/"
                                         aria-label="Instagram de Bill Irwin" target="_blank" rel="noopener noreferrer">
-                                        <box-icon name='instagram-alt' type='logo' color='currentColor'
-                                            size='md'></box-icon>
+                                        <box-icon type='logo' name='instagram-alt' color='currentColor' size='md'></box-icon>
                                     </a>
                                 </li>
                             </ul>
@@ -598,7 +596,7 @@
                                     dans le film.
                                 </p>
                             </div>
-                            <ul class="distribution__card-socials" role="list">
+                            <ul class="distribution__card-socials">
                                 <li class="distribution__card-socials__item">
                                     <a class="distribution__card-socials__link"
                                         href="https://www.facebook.com/OfficialMattDamon/"
@@ -617,8 +615,7 @@
                                     <a class="distribution__card-socials__link"
                                         href="https://www.instagram.com/matt_damon_official/"
                                         aria-label="Instagram de Matt Damon" target="_blank" rel="noopener noreferrer">
-                                        <box-icon name='instagram-alt' type='logo' color='currentColor'
-                                            size='md'></box-icon>
+                                        <box-icon type='logo' name='instagram-alt' color='currentColor' size='md'></box-icon>
                                     </a>
                                 </li>
                             </ul>
@@ -638,7 +635,7 @@
                                     humaine sur l'amour et le sacrifice.
                                 </p>
                             </div>
-                            <ul class="distribution__card-socials" role="list">
+                            <ul class="distribution__card-socials">
                                 <li class="distribution__card-socials__item">
                                     <a class="distribution__card-socials__link"
                                         href="https://www.facebook.com/ChristopherNolanUK/"
@@ -660,8 +657,7 @@
                                         href="https://www.instagram.com/christophernolann"
                                         aria-label="Instagram de Christopher Nolan" target="_blank"
                                         rel="noopener noreferrer">
-                                        <box-icon name='instagram-alt' type='logo' color='currentColor'
-                                            size='md'></box-icon>
+                                        <box-icon type='logo' name='instagram-alt' color='currentColor' size='md'></box-icon>
                                     </a>
                                 </li>
                             </ul>
@@ -684,7 +680,7 @@
                         </p>
                     </div>
                     <!-- Carte - Récompenses -->
-                    <div class="raisons__card-grid col-span-12 grid grid-cols-12 bg-beige-terre rounded-2xl m-7">
+                    <div class="raisons__card-grid col-start-2 col-span-10 xl: grid grid-cols-12 bg-beige-terre rounded-2xl">
                         <div class="raisons__card-media col-span-12 order-2 md:col-span-4 md:order-1">
                             <img class="raisons__card-img" src="media/raisons/raison-1.jpg" alt="Quatre gagnants des Oscars tenant leurs statuettes dorées sur scène.">
                         </div>
@@ -723,7 +719,7 @@
                     </div>
 
                     <!-- Carte - Commentaire d'un fan-->
-                    <div class="raisons__card-grid col-span-12 grid grid-cols-12 bg-beige-terre rounded-2xl m-7">
+                    <div class="raisons__card-grid col-start-2 col-span-10 grid grid-cols-12 bg-beige-terre rounded-2xl">
                         <div class="raisons__card-media col-span-12 order-2 md:col-span-4 md:order-2 ">
                             <img class="raisons__card-img" src="media/raisons/raison-2.png" alt="Photo de profil du fan @septieme_art_fan">
                         </div>
@@ -753,7 +749,7 @@
                     </div>
 
                     <!-- Carte - Critique -->
-                    <div class="raisons__card-grid col-span-12 grid grid-cols-12 bg-beige-terre rounded-2xl m-7">
+                    <div class="raisons__card-grid col-start-2 col-span-10 grid grid-cols-12 bg-beige-terre rounded-2xl">
                         <div
                             class="raisons__card-media col-span-12 order-2 md:col-span-4 md:order-1">
                             <img class="raisons__card-img" src="media/raisons/raison-3.png" alt="Photo de la critique Sophie Dubois">
@@ -815,7 +811,7 @@
                     </p>
 
 
-                    <ul class="footer__social-list flex gap-4" role="list">
+                    <ul class="footer__social-list flex gap-4">
                         <li class="footer__social-item">
                             <a class="footer__social-link" href="https://www.facebook.com/" aria-label="Facebook"
                                 target="_blank" rel="noopener noreferrer">
@@ -840,8 +836,7 @@
                         <li class="footer__social-item">
                             <a class="footer__social-link" href="https://www.instagram.com/" aria-label="Instagram"
                                 target="_blank" rel="noopener noreferrer">
-                                <box-icon name='instagram-alt' type='logo' color='currentColor' size='md'
-                                    aria-hidden="true"></box-icon>
+                                <box-icon type='logo' name='instagram-alt' color='currentColor' size='md'></box-icon>
                             </a>
                         </li>
                     </ul>
