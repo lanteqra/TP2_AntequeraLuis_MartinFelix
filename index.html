@@ -32,6 +32,7 @@
     <script src="js/carousel.js" defer></script>
     <script src="js/validation.js" defer></script>
     <script src="js/castCards.js" defer></script>
+    <script src="js/voirPlus.js" defer></script>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -92,7 +93,26 @@
         .distribution__card-socials__link, .footer__social-link {
             @apply focus-visible:outline-2 focus-visible:outline-orange-horizon focus-visible:outline-offset-2;
         }
-        
+
+        .raisons__card-content {
+            @apply h-auto bg-bleu-nuit p-5 m-5 rounded-lg shadow-xl shadow-noir-espace/60;
+        }
+        .raisons__card-media {
+            @apply w-full h-full flex justify-center p-7;
+        }
+        .raisons__card-img {
+            @apply w-auto h-full object-cover rounded-lg shadow-xl shadow-noir-espace/60;
+        }
+        .raisons__card-heading {
+            @apply text-2xl pb-3 font-extrabold text-beige-terre;
+        }
+        .raisons__card-text {
+            @apply transition-all duration-300 overflow-hidden text-[1rem];
+        } 
+        .raisons__card-grid  {
+            @apply  transition-transform duration-300 hover:-translate-y-2 shadow-xl shadow-blanc-stellaire/40 hover:scale-105;
+        } 
+
     </style>
 
 </head>
@@ -102,7 +122,7 @@
     <a href="#content" class="sr-only">Aller au contenu principal</a>
     <header>
         <!-- navbar -->
-        <div class="navbar__container grid grid-cols-12 gap-1 text-center">
+        <div class="navbar__container grid grid-cols-12 gap-1 text-center border-b-4 border-beige-terre">
 
             <!-- component -->
             <nav class="navbar col-span-12 flex items-center bg-bleu-nuit p-3 flex-wrap">
@@ -113,19 +133,19 @@
                         class="navbar__title font-titre text-3xl text-blanc-stellaire font-bold uppercase tracking-wide hover:text-orange-horizon">Interstellar</span>
                 </a>
                 <button class=" navbar__toggle text-blanc-stellaire inline-flex p-4 hover:bg-blanc-stellaire/25 rounded
-                        lg:hidden ml-auto hover:text-orange-horizon nav-toggler focus-visible"
+                        md:hidden ml-auto hover:text-orange-horizon nav-toggler focus-visible"
                     data-target="#navigation" aria-expanded="false">
                     <i class="material-icons text-4xl!" aria-hidden="true">menu</i>
                 </button>
-                <div class="navbar__menu hidden top-navbar w-full lg:inline-flex lg:grow lg:w-auto" id="navigation">
+                <div class="navbar__menu hidden top-navbar w-full md:inline-flex md:grow md:w-auto" id="navigation">
                     <div
-                        class=" navbar__list lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto pr-5 gap-3.5 text-[1.2rem]">
+                        class=" navbar__list md:inline-flex md:flex-row md:ml-auto md:w-auto w-full md:items-center items-start  flex flex-col md:h-auto pr-5 gap-3.5 text-[1.2rem]">
                         <a href="index.html"
-                            class="navbar__link navbar__link--active lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-bleu-nuit font-semibold items-center justify-center bg-beige-terre hover:bg-blanc-stellaire hover:text-orange-horizon transition-colors focus-visible">
+                            class="navbar__link navbar__link--active md:inline-flex md:w-auto w-full px-3 py-2 rounded text-bleu-nuit font-semibold items-center justify-center bg-beige-terre hover:bg-blanc-stellaire hover:text-orange-horizon transition-colors focus-visible">
                             <span>Accueil</span>
                         </a>
                         <a href="tournage.html"
-                            class="navbar__link lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-bleu-nuit font-extrabold items-center justify-center bg-blanc-stellaire hover:bg-blanc-stellaire transition-colors hover:text-orange-horizon focus-visible">
+                            class="navbar__link md:inline-flex md:w-auto w-full px-3 py-2 rounded text-bleu-nuit font-extrabold items-center justify-center bg-blanc-stellaire hover:bg-blanc-stellaire transition-colors hover:text-orange-horizon focus-visible">
                             <span>Tournage</span>
                         </a>
 
@@ -137,13 +157,13 @@
 
     </header>
     <main id="content">
-        <!-- hero -->
+        <!-- Section hero -->
         <section
-            class="hero bg-[url(media/hero.jpg)] bg-cover bg-center bg-no-repeat min-h-[50vw] md:min-h-[40vw] lg:min-h-[700px] flex items-center">
+            class="hero bg-[url(media/hero.jpg)] bg-cover bg-center bg-no-repeat min-h-[50vw] md:min-h-[40vw] lg:min-h-[700px] flex items-center border-b-4 border-beige-terre">
             <div class="hero__container container mx-auto px-4">
-                <div class="grid grid-cols-12 gap-2 h-full items-center">
+                <div class="grid grid-cols-12 gap-2 h-full items-center ">
                     <!-- R -->
-                    <div class="hero__content col-span-12  flex flex-col justify-center sm:col-span-5 m-7 gap-6">
+                    <div class="hero__content col-span-12  flex flex-col justify-center md:col-span-5 m-7 gap-6">
                         <h1
                             class="hero__title font-titre text-2xl md:text-4xl  text-blanc-stellaire font-bold uppercase">
                             Interstellar</h1>
@@ -163,7 +183,7 @@
                         <span class="hero__form-msg" id="quantite-msg" role="status" aria-live="polite"></span>
                     </div>
                     <!-- L -->
-                    <div class="hero-carousel-wrapper col-span-12 sm:col-span-7 m-7 flex flex-col items-center gap-4">
+                    <div class="hero-carousel-wrapper col-span-12 md:col-span-7 m-7 flex flex-col items-center gap-4">
                         <!-- component -->
                         <!-- Carousel -->
                         <div class="carousel relative w-full overflow-hidden rounded-lg h-[300px] md:h-[400px]"
@@ -221,10 +241,10 @@
 
             </div>
         </section>
-        <!-- images-extraits -->
+        <!-- Section images-extraits -->
         <section id="images-extraits" class="images-extraits bg-noir-espace text-blanc-stellaire"
             aria-label="des images et extraits du film">
-            <div class="images-extraits__container container mx-auto px-4 h-full">
+            <div class="images-extraits__container container mx-auto px-4 h-full border-b-4 border-beige-terre">
                 <div class="images-extraits__grid grid grid-cols-12 gap-5 h-full  items-center pt-7 pb-7">
                     <!-- Section header -->
                     <div class="images-extraits__header h-auto col-span-12 pb-6 pt-6">
@@ -252,7 +272,7 @@
 
                     </div>
                     <!-- img 1 -->
-                    <div class="h-[300px] col-span-12 md:col-span-6 lg:col-span-4">
+                    <div class="h-[300px] col-span-12 md:col-span-6 xl:col-span-4">
                         <figure class="images-extraits__figure images-extraits__figure--delay-1 h-full" role="figure"
                             aria-label="Scène du film Interstellar">
                             <div
@@ -269,7 +289,7 @@
                         </figure>
                     </div>
                     <!-- img 2 -->
-                    <div class="h-[300px] col-span-12 md:col-span-6 lg:col-span-4">
+                    <div class="h-[300px] col-span-12 md:col-span-6 xl:col-span-4">
                         <figure class="images-extraits__figure images-extraits__figure--delay-2 h-full" role="figure"
                             aria-label="Scène du film Interstellar">
                             <div
@@ -286,7 +306,7 @@
                         </figure>
                     </div>
                     <!-- img 3 -->
-                    <div class="h-[300px] col-span-12 md:col-span-6 lg:col-span-4">
+                    <div class="h-[300px] col-span-12 md:col-span-6 xl:col-span-4">
                         <figure class="images-extraits__figure images-extraits__figure--delay-3 h-full" role="figure"
                             aria-label="Scène du film Interstellar">
                             <div
@@ -304,7 +324,7 @@
                     </div>
                     <!-- vid -->
                     <div
-                        class="images-extraits__video-wrapper images-extraits__video-wrapper--delay h-auto col-span-12 md:col-span-6 lg:col-start-3 lg:col-span-8">
+                        class="images-extraits__video-wrapper images-extraits__video-wrapper--delay h-auto col-span-12 md:col-span-6 xl:col-start-3 xl:col-span-8">
                         <div
                             class="images-extraits__video-embed relative pb-[56.25%] h-0 overflow-hidden md:pb-0 md:h-[300px] lg:pb-[56.25%] lg:h-0 rounded-lg mb-4 shadow-xl shadow-blanc-stellaire/20">
                             <iframe class="absolute top-0 left-0 w-full h-full"
@@ -320,10 +340,10 @@
                 </div>
             </div>
         </section>
-        <!-- cast - distribution -->
+        <!-- Section cast - distribution -->
         <section id="distribution" class="distribution bg-noir-espace text-blanc-stellaire"
             aria-label="Présentation des acteurs et de l'équipe">
-            <div class="distribution__container container mx-auto px-4 h-full">
+            <div class="distribution__container container mx-auto px-4 h-full border-b-4 border-beige-terre">
                 <div class="distribution__grid grid grid-cols-12 gap-5 h-full  items-stretch pt-7 pb-7">
                     <!-- Section header -->
                     <div class="distribution__header col-span-12 h-auto pb-6 pt-6">
@@ -334,7 +354,7 @@
                             réalisation de ce film.</p>
                     </div>
                     <!-- Carte 1 -->
-                    <div class="distribution__item col-span-6 md:col-span-4 lg:col-span-3 h-auto">
+                    <div class="distribution__item col-span-6 md:col-span-4 xl:col-span-3 h-auto">
                         <article class="distribution__card">
                             <img class="distribution__card-img" src="media/cast/cast1.jpg"
                                 alt="photo de Matthew McConaughey ">
@@ -376,7 +396,7 @@
                         </article>
                     </div>
                     <!-- Carte 2 -->
-                    <div class="distribution__item col-span-6 md:col-span-4 lg:col-span-3 h-auto">
+                    <div class="distribution__item col-span-6 md:col-span-4 xl:col-span-3 h-auto">
                         <article class="distribution__card">
                             <img class="distribution__card-img" src="media/cast/cast2.jpg"
                                 alt="photo de Jessica Chastain">
@@ -418,7 +438,7 @@
                         </article>
                     </div>
                     <!-- Carte 3 -->
-                    <div class="distribution__item col-span-6 md:col-span-4 lg:col-span-3 h-auto">
+                    <div class="distribution__item col-span-6 md:col-span-4 xl:col-span-3 h-auto">
                         <article class="distribution__card">
                             <img class="distribution__card-img" src="media/cast/cast3.jpg"
                                 alt="photo de Anne Hathaway ">
@@ -456,7 +476,7 @@
                         </article>
                     </div>
                     <!-- Carte 4 -->
-                    <div class="distribution__item col-span-6 md:col-span-4 lg:col-span-3 h-auto">
+                    <div class="distribution__item col-span-6 md:col-span-4 xl:col-span-3 h-auto">
                         <article class="distribution__card">
                             <img class="distribution__card-img" src="media/cast/cast4.jpg" alt="photo de Mackenzie Foy">
                             <div class="distribution__card-body">
@@ -495,7 +515,7 @@
                         </article>
                     </div>
                     <!-- Carte 5 -->
-                    <div class="distribution__item col-span-6 md:col-span-4 lg:col-span-3 h-auto">
+                    <div class="distribution__item col-span-6 md:col-span-4 xl:col-span-3 h-auto">
                         <article class="distribution__card">
                             <img class="distribution__card-img" src="media/cast/cast5.jpg" alt="photo de Michael Caine">
                             <div class="distribution__card-body">
@@ -534,7 +554,7 @@
                         </article>
                     </div>
                     <!-- Carte 6 -->
-                    <div class="distribution__item col-span-6 md:col-span-4 lg:col-span-3 h-auto">
+                    <div class="distribution__item col-span-6 md:col-span-4 xl:col-span-3 h-auto">
                         <article class="distribution__card">
                             <img class="distribution__card-img" src="media/cast/cast6.webp"
                                 alt="photo de Bill Irwin - TARS">
@@ -567,7 +587,7 @@
                         </article>
                     </div>
                     <!-- Carte 7 -->
-                    <div class="distribution__item col-span-6 md:col-start-3 md:col-span-4 lg:col-span-3 h-auto">
+                    <div class="distribution__item col-span-6 md:col-start-3 md:col-span-4 xl:col-span-3 h-auto">
                         <article class="distribution__card">
                             <img class="distribution__card-img" src="media/cast/cast7.webp" alt="photo de Matt Damon">
                             <div class="distribution__card-body">
@@ -605,7 +625,7 @@
                         </article>
                     </div>
                     <!-- Carte 8 -->
-                    <div class="distribution__item col-span-6 md:col-span-4 lg:col-span-3 h-auto">
+                    <div class="distribution__item col-span-6 md:col-span-4 xl:col-span-3 h-auto">
                         <article class="distribution__card">
                             <img class="distribution__card-img" src="media/cast/realisateur.jpg"
                                 alt="photo de Christopher Nolan ">
@@ -650,19 +670,135 @@
                 </div>
             </div>
         </section>
+        <!-- Section raisons -->
+        <section id="raisons" class="bg-noir-espace text-blanc-stellaire" aria-label="raisons pour voir ce film">
+            <div class="raisons__container container mx-auto px-4 h-full">
+                <div class="raisons__grid grid grid-cols-12 gap-5 h-full  items-stretch pt-7 pb-7">
+                    <!-- Section header -->
+                    <div class="raisons__header col-span-12 h-auto pb-6 pt-6">
+                        <h2
+                            class="raisons__title font-titre text-beige-terre text-2xl pb-4 font-bold uppercase tracking-wide">
+                            Pourquoi voir Interstellar ?</h2>
+                        <p class="raisons__paragraphe">Découvrez les raisons qui font de ce film une expérience
+                            incontournable.
+                        </p>
+                    </div>
+                    <!-- Carte - Récompenses -->
+                    <div class="raisons__card-grid col-span-12 grid grid-cols-12 bg-beige-terre rounded-2xl m-7">
+                        <div class="raisons__card-media col-span-12 order-2 md:col-span-4 md:order-1">
+                            <img class="raisons__card-img" src="media/raisons/raison-1.jpg" alt="Quatre gagnants des Oscars tenant leurs statuettes dorées sur scène.">
+                        </div>
+                        <div class="raisons__card-content col-span-12 order-1 md:col-span-8 md:order-2 ">
+                            <h3 class="raisons__card-heading ">Récompenses</h3>
+                            <div class="raisons__card-text  line-clamp-3" id="raisons-text-1">
+                                <p class="raisons__card-paragraph">Interstellar a connu un succès notable lors de la saison des récompenses 2014-2015,
+                                    remportant plusieurs prix prestigieux malgré une présence plus discrète dans les
+                                    catégories majeures (Meilleur film, Meilleur réalisateur).</p>
+                                <p class="raisons__card-paragraph">Aux 87e Oscars, le film a remporté l'Oscar du meilleur effets visuels, sur cinq
+                                    nominations au total, dont celles pour la musique originale, le mixage et le montage
+                                    sonore, et la direction artistique. Le prix a été décerné aux superviseurs Paul
+                                    Franklin, Andrew Lockley, Ian Hunter et Scott Fisher.
+                                    Aux British Academy Film Awards (BAFTA), Interstellar a remporté le prix des
+                                    meilleurs
+                                    effets visuels spéciaux, en plus de nominations pour la meilleure musique originale,
+                                    la
+                                    meilleure photographie et les meilleurs décors.</p>
+                                <p class="raisons__card-paragraph">Du côté des Critics' Choice Awards, le film a remporté le prix du meilleur film de
+                                    science-fiction/horreur, sur sept nominations.</p>
+                                <p class="raisons__card-paragraph">Aux Saturn Awards, sa performance a été particulièrement forte : le film a reçu onze
+                                    nominations et a remporté six prix, dont celui du meilleur film de science-fiction.
+                                </p>
+                                <p class="raisons__card-paragraph">En résumé, les véritables victoires d'Interstellar se concentrent principalement sur
+                                    les
+                                    effets visuels (Oscars et BAFTA), tandis que les autres catégories listées dans ton
+                                    document (meilleure photographie, meilleure musique, meilleurs décors, etc.) sont
+                                    restées au stade de la nomination, sans victoire.</p>
+                            </div>
+
+                            <button class="raisons__card-toggle mt-2 text-sm font-semibold underline focus-visible text-beige-terre hover:text-orange-horizon hover:font-bold pt-5"
+                                aria-expanded="false"  aria-controls="raisons-text-1">
+                                Voir plus
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Carte - Commentaire d'un fan-->
+                    <div class="raisons__card-grid col-span-12 grid grid-cols-12 bg-beige-terre rounded-2xl m-7">
+                        <div class="raisons__card-media col-span-12 order-2 md:col-span-4 md:order-2 ">
+                            <img class="raisons__card-img" src="media/raisons/raison-2.png" alt="Photo de profil du fan @septieme_art_fan">
+                        </div>
+                        <div class="raisons__card-content col-span-12 order-1 md:col-span-8 md:order-1">
+                            <h3 class="raisons__card-heading">Commentaire en vedette</h3>
+                            <h4 class="raisons__card-subheading text-md font-semibold text-beige-terre pb-4 ">«On est en 2026 et je suis encore en larmes après avoir
+                                revu ce chef-d'œuvre » - @septieme_art_fan </h4>
+                            <div class="raisons__card-text line-clamp-3" id="raisons-text-2">
+                                <p class="raisons__card-paragraph">Je considère le cinéma comme une forme d'art capable d'évoquer des émotions
+                                    chez-nous, les êtres humains. Interstellar fait partie de ces rares œuvres qui font
+                                    naître des sentiments profonds et inexplicables sur ce que signifie être vivant,
+                                    conscients de notre existence éphémère, mais capables d'imaginer au-delà du temps,
+                                    jusqu'à l'infini. </p>
+                                    <p class="raisons__card-paragraph">Son exploration de l'amour, du sacrifice et de l'inconnu est profondément humaine et
+                                    nous relie à quelque chose de plus grand. Les images sont à couper le souffle, la
+                                    bande sonore est d'une beauté envoûtante, et l'histoire résonne autant sur le plan
+                                    émotionnel que philosophique. </p>
+                                    <p class="raisons__card-paragraph">Ce film m'a fait pleurer, non pas seulement à cause de
+                                    sa tristesse, mais à cause de sa beauté pure et bouleversante.</p>
+                            </div>
+
+                            <button class="raisons__card-toggle mt-2 text-sm font-semibold underline focus-visible text-beige-terre hover:text-orange-horizon hover:font-bold  pt-5"
+                                aria-expanded="false" aria-controls="raisons-text-2">
+                                Voir plus
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Carte - Critique -->
+                    <div class="raisons__card-grid col-span-12 grid grid-cols-12 bg-beige-terre rounded-2xl m-7">
+                        <div
+                            class="raisons__card-media col-span-12 order-2 md:col-span-4 md:order-1">
+                            <img class="raisons__card-img" src="media/raisons/raison-3.png" alt="Photo de la critique Sophie Dubois">
+                        </div>
+                        <div
+                            class="raisons__card-content col-span-12 order-1 md:col-span-8 md:order-2">
+                            <h3 class="raisons__card-heading">Critique
+                            </h3>
+                            <h4 class="raisons__card-subheading text-md font-semibold text-beige-terre pb-4">C'est l'hommage assumé de Nolan à « 2001 : l'Odyssée de
+                                l'espace » - Sophie Dubois du Cahiers du Cinéma</h4>
+                            <div class="raisons__card-text line-clamp-3" id="raisons-text-3">
+                                <p class="raisons__card-paragraph">Trous noirs, relativité, singularité, cinquième dimension ! Les discours sont
+                                    grandioses. Il y a cependant un problème. Livré sur un ton familier et précipité,
+                                    une
+                                    grande partie de ces fascinantes notions ésotériques, pourtant centrales à
+                                    l'intrigue,
+                                    est difficile à comprendre, et parfois même à entendre. Le compositeur Hans Zimmer
+                                    produit de monstrueuses montées d'orgue qui, par moments, étouffent les dialogues
+                                    comme une coulée de lave. Les acteurs semblent dépassés par la production.</p>
+                            </div>
+
+                            <button class="raisons__card-toggle mt-2 text-sm font-semibold underline focus-visible text-beige-terre hover:text-orange-horizon hover:font-bold  pt-5"
+                                aria-expanded="false" aria-controls="raisons-text-3">
+                                Voir plus
+                            </button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
     </main>
-    <footer class="footer bg-bleu-nuit text-blanc-stellaire font-corps">
+    <footer class="footer bg-bleu-nuit text-blanc-stellaire font-corps border-t-4 border-beige-terre">
         <div class="footer__container container mx-auto px-4 py-8">
             <div class="footer__grid grid grid-cols-12 gap-4 items-center">
 
                 <!-- top left -->
                 <div
                     class="footer__top-left col-span-12 sm:col-span-6 flex flex-row items-center gap-2 justify-center sm:justify-start">
-                    <address class="footer__address flex flex-col md:flex-row gap-4 text-center sm:text-left">
+                    <address class="footer__address flex flex-col md:flex-row gap-4 text-center sm:text-left focus-visible">
                         <a href="tel:873-123-4567" class="footer__link flex items-center">
                             <box-icon name='phone' type='solid' color='currentColor' size='md'></box-icon> 873-123-4567
                         </a>
-                        <a href="mailto:info@Interstellar.com" class="footer__link flex items-center">
+                        <a href="mailto:info@Interstellar.com" class="footer__link flex items-center focus-visible">
                             <box-icon name='envelope' type='solid' color='currentColor' size='md'></box-icon>
                             info@Interstellar.com
                         </a>

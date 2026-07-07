@@ -58,6 +58,7 @@ visuelle du projet (palette de couleurs, typographies et thème Interstellar).
 | Luis         | index : Section distribution avec animation Js                                                               |
 | Luis         | index : Section images-extraits avec animation CSS                                                           |
 | Félix        | tournage : Section fait-divers avec animation CSS                                                            |
+| Luis         | index : Section raisons avec hover                                                                           |
 | ------------ | ----------------                                                                                             |
 
 ## Validation W3C :
