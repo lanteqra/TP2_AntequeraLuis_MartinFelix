@@ -2,7 +2,7 @@
 
 Travail Pratique 2 - Git, grille et composants Tailwind, animations - Technique d’intégration des interfaces Web 2
 
-## Auteur :
+## Auteurs :
 
 Luis Antequera - Félix Martin
 Étudiants en Techniques d'intégration des interfaces Web
@@ -30,16 +30,16 @@ Dans le cadre du cours Techniques d'intégration des interfaces Web 2, ce travai
 - CSS3 (méthodologie BEM, animations)
   - Animations CSS :
     - Section Images et extraits : apparition en cascade des images avec "fadeScaleIn" et apparition de la vidéo avec "fadeIn", avec des délais échelonnés. Effet de zoom et luminosité au survol des images. Le "z-index" au survol permet à l'image sélectionnée de passer au premier plan. Toutes les animations utilisent "cubic-bezier(0.16, 1, 0.3, 1)" pour un rendu fluide. (Styles déclares dans style.css)
-    - Section Faits divers : L'image apparaît avec un effet de fondu et de translation verticale (faitDiversFadeUp). Les .fait-divers__stat apparaissent en cascade avec un effet d'apparition en scale et opacité, avec des délais échelonnés (faitDiversStatPopIn) - (styles déclarés dans style.css). Au survol, les statistiques ont un effet d'agrandissement scale(1.05), une ombre claire, avec une transition fluide de 300ms (styles déclarés en Tailwind).
+    - Section Faits divers : L'image apparaît avec un effet de fondu et de translation verticale (faitDiversFadeUp). Les .fait-divers\_\_stat apparaissent en cascade avec un effet d'apparition en scale et opacité, avec des délais échelonnés (faitDiversStatPopIn) - (styles déclarés dans style.css). Au survol, les statistiques ont un effet d'agrandissement scale(1.05), une ombre claire, avec une transition fluide de 300ms (styles déclarés en Tailwind).
 
 - Composants Tailwind :
   - Barre de navigation : "Simple Responsive Navigation Bar" - https://www.creative-tim.com/twcomponents/component/simple-responsive-navigation-bar
   - Carrousel : "Carousel with indicator buttons" - https://daisyui.com/components/carousel/#carousel-with-indicator-buttons
-  - Accordéon :  "Accordion" - https://tailwindflex.com/@abhirajk/accordion-2
+  - Accordéon : "Accordion" - https://tailwindflex.com/@abhirajk/accordion-2
 
 - Javascript (animations)
   - Animation Js :
-    - Carousel personnalisé avec auto-slide et dots de navigation - js/carousel.js 
+    - Carousel personnalisé avec auto-slide et dots de navigation - js/carousel.js
     - Cartes distribution animation sur la "y" avec GSAP ScrollTrigger - js/castCards.js - https://gsap.com/docs/v3/Plugins/ScrollTrigger/
     - images animation sur la "x" avec GSAP ScrollTrigger - js/bloopersImg.js - https://gsap.com/docs/v3/Plugins/ScrollTrigger/
 
@@ -47,34 +47,40 @@ Dans le cadre du cours Techniques d'intégration des interfaces Web 2, ce travai
 
 ## Tâches :
 
-| Membre       | Tâche réalisée                                                                                               |
-| ------------ | ------------------------------------------------------------------------------------------------------------ |
-| Luis         | Configuration initiale du projet (Tailwind, structure HTML)                                                  |
-| Luis         | Navbar responsive (grille, menu hamburger, palette de couleurs) - Composant Tailwind                         |
-| Félix        | Footer                                                                                                       |
-| Luis         | index : Section hero - carrousel avec animation js - Composant Tailwind                                      |
-| Luis         | index : Section distribution avec animation Js                                                               |
-| Luis         | index : Section images-extraits avec animation CSS                                                           |
-| Félix        | tournage : Section fait-divers avec animation CSS                                                            |
-| Félix        | tournage : Section tournage et bloopers avec animation Js                                                    |
-| Félix        | tournage : Section anecdotes avec hover - Composant Tailwind                                                 |
-| Luis         | index : Section raisons avec hover                                                                           |
-| Luis         | Validation W3C (html et css) - Google/Lighthouse  - WAVE  | Des ajustements du code                          |
+| Membre | Tâche réalisée                                                                       |
+| ------ | ------------------------------------------------------------------------------------ |
+| Luis   | Configuration initiale du projet (Tailwind, structure HTML)                          |
+| Luis   | Navbar responsive (grille, menu hamburger, palette de couleurs) - Composant Tailwind |
+| Félix  | Footer                                                                               |
+| Luis   | index : Section hero - carrousel avec animation js - Composant Tailwind              |
+| Luis   | index : Section distribution avec animation Js                                       |
+| Luis   | index : Section images-extraits avec animation CSS                                   |
+| Félix  | tournage : Section fait-divers avec animation CSS                                    |
+| Félix  | tournage : Section tournage et bloopers avec animation Js                            |
+| Félix  | tournage : Section anecdotes avec hover - Composant Tailwind                         |
+| Luis   | index : Section raisons avec hover                                                   |
+| Luis   | Validation W3C (html et css) - Google/Lighthouse - WAVE - Des ajustements du code    |
 
 ## Validation W3C :
 
-- HTML : 
+- HTML :
   **index.html - tournage.html**
   Les pages HTML du site ont été validées avec succès via https://validator.w3.org/#validate_by_input
-  Mais Les seules erreurs/avertissements restants dans le rapport sont : 
-    * Les erreurs liées à la syntaxe Tailwind CSS (@theme, @apply), inhérentes à l'utilisation du CDN Tailwind Play, qui n'est pas reconnu par le validateur W3C car ce n'est pas du CSS standard.
-    * Les avertissements concernant l'attribut "name" des éléments personnalisés (<box-icon>) (web component de la librairie Boxicons), non reconnu par le validateur car il ne fait pas partie du schéma HTML standard.
-  Ces erreurs ont été approuvées et sont ignorées, tel que confirmé par le professeur.
+  Mais Les seules erreurs/avertissements restants dans le rapport sont :
+  - Les erreurs liées à la syntaxe Tailwind CSS (@theme, @apply), inhérentes à l'utilisation du CDN Tailwind Play, qui n'est pas reconnu par le validateur W3C car ce n'est pas du CSS standard.
+  - Les avertissements concernant l'attribut "name" des éléments personnalisés (<box-icon>) (web component de la librairie Boxicons), non reconnu par le validateur car il ne fait pas partie du schéma HTML standard.
+    Ces erreurs ont été approuvées et sont ignorées, tel que confirmé par le professeur.
 
-- CSS : "valide conformément à la recommandation CSS niveau 3 + SVG !" via https://jigsaw.w3.org/css-validator/validator.html.fr#validate_by_input 
+- CSS : "valide conformément à la recommandation CSS niveau 3 + SVG !" via https://jigsaw.w3.org/css-validator/validator.html.fr#validate_by_input
 - Méthodologie BEM : La méthodologie BEM a été appliquée de manière cohérente à l'ensemble des classes CSS du projet, assurant une structure claire et maintenable.
 - Score d'accessibilité Google - Lighthouse : 100%
 - Score d'accessibilité Wave ( Web accessibility evaluation tool - extension Chrome) : 10 / 10
-  notes sur les alertes restant : 
-    - Note sur les liens redondants (logo + "Accueil") WAVE signale que le logo et le lien "Accueil" pointent vers la même URL (index.html). Ce choix est volontaire afin que les deux éléments restent pleinement fonctionnels et navigables pour tous les utilisateurs, y compris au clavier.
-    -  Note sur la vidéo YouTube, La bande-annonce intégrée provient de YouTube. Les sous-titres dépendent de la disponibilité fournie par la plateforme (CC) et ne sont pas gérés directement par notre code.
+  notes sur les alertes restant :
+  - Note sur les liens redondants (logo + "Accueil") WAVE signale que le logo et le lien "Accueil" pointent vers la même URL (index.html). Ce choix est volontaire afin que les deux éléments restent pleinement fonctionnels et navigables pour tous les utilisateurs, y compris au clavier.
+  - Note sur la vidéo YouTube, La bande-annonce intégrée provient de YouTube. Les sous-titres dépendent de la disponibilité fournie par la plateforme (CC) et ne sont pas gérés directement par notre code.
+
+## Note additionnelle - Ligne @import "tailwindcss" dans style.css
+
+Une erreur apparaît dans la console du navigateur en raison de la ligne @import "tailwindcss" présente dans le fichier style.css. Cette ligne a été ajoutée afin que l'extension VS Code (IntelliSense Tailwind) reconnaisse les classes utilitaires lors du développement. Cependant, cette directive n'est interprétable que par un compilateur Tailwind (CLI/build tool) et non par le navigateur, ce qui cause l'erreur en console puisque le projet utilise le CDN (@tailwindcss/browser) plutôt qu'une version compilée.
+
+Nous avons contacté le professeur via Teams au sujet de cette situation afin de savoir si cette ligne devait être retirée pour la remise finale. N'ayant pas reçu de réponse avant la date de remise, nous avons procédé à l'envoi du projet en conservant la ligne @import "tailwindcss" dans le fichier style.css.
